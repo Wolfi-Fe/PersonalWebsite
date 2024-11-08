@@ -41,6 +41,30 @@
 body {
     margin: 0;
     font-family: "Oswald", sans-serif;
+    background-image: url("img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 23px;
+    color: cornflowerblue;
+    margin-left: 1em;
+}
+
+header a:hover {
+    color: rgba(100, 149, 237, 0.66);
+}
+
+.header {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
 h1 {
@@ -64,15 +88,15 @@ h1 {
     font-size: 50px;
 }
 
-.img-me {
+.logo {
     display: flex;
     justify-content: flex-start;
     padding: 100px;
 }
 
-.img-me img {
+.logo img {
     border-radius: 50%;
-    width: 800px;
+    width: 300px;
 }
 
 .img-text-right {
