@@ -41,10 +41,14 @@
 body {
     margin: 0;
     font-family: "Oswald", sans-serif;
-    background-image: url("img/background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+}
+
+.background {
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    opacity: 0.6;
 }
 
 header a {
