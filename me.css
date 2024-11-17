@@ -58,6 +58,7 @@ h1 {
     padding: 8px 19px;
     border-radius: 8px;
     border: solid white;
+    text-align: center;
     }
 
 .links_me a:hover {
