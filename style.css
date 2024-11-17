@@ -101,6 +101,7 @@ h1 {
 .logo img {
     border-radius: 50%;
     width: 300px;
+    margin-left: auto;
 }
 
 .img-text-right {
@@ -110,6 +111,7 @@ h1 {
     align-items: center;
     flex-direction: column;
     text-align: left;
+    margin-right: auto;
 }
 
 .img-text-right h2 {
