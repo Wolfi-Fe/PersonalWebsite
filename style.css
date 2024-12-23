@@ -1,33 +1,13 @@
 @media (prefers-color-scheme: dark) {
     .section-top span{
-        color: #ffffff;
+        color: rgb(214, 214, 214);
     }
     body {
         background-color: #000;
     }
-
-    .img-text-right h2 {
-        color: #ffffff;
-    }
-
-    .img-text-right p {
-        color: #ffffff;
-    }
-
     h1 {
-        color: rgb(255, 255, 255);
+        color: rgb(214, 214, 214);
     }
-}
-
-/* Setze die Breite auf 100% für alle Bildgeräte */
-img, video {
-    max-width: 100%;
-    height: auto; /* Behalte das Seitenverhältnis */
-}
-
-/* Standard Box-Sizing für alle Elemente */
-*, *::before, *::after {
-    box-sizing: border-box;
 }
 
 body {
@@ -46,14 +26,14 @@ body {
     position: fixed;
     z-index: -1;
     top: 0;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 header a {
     text-decoration: none;
     font-weight: bold;
     font-size: 23px;
-    color: cornflowerblue;
+    color: rgb(214, 214, 214);
     margin-left: 1em;
 }
 
@@ -62,7 +42,7 @@ header a:hover {
 }
 
 .header {
-    margin-top: 32px;
+    margin-top: 59px;
     margin-bottom: 32px;
     display: flex;
     justify-content: left;
@@ -70,10 +50,11 @@ header a:hover {
 }
 
 h1 {
-    padding-top: 5px;
+    padding-top: 95px;
     font-size: 80px;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0;
 }
 
@@ -88,37 +69,6 @@ h1 {
 .section-top span{
     margin-top: 8px;
     font-size: 50px;
-}
-
-.logo {
-    display: flex;
-    justify-content: flex-start;
-    padding: 100px;
-}
-
-.logo img {
-    border-radius: 50%;
-    width: 300px;
-    margin-left: auto;
-    aspect-ratio: 1/1;
-}
-
-.img-text-right {
-    padding-left: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: left;
-    margin-right: auto;
-}
-
-.img-text-right h2 {
-    font-size: 35px;
-}
-
-.img-text-right p {
-    font-size: 22px;
 }
 
 /* Große Bildschirme */
@@ -147,10 +97,6 @@ h1 {
     h1 {
         font-size: 60px;
     }
-
-    .img-text-right p {
-        font-size: 18px;
-    }
 }
 
 /* Sehr kleine Bildschirme */
@@ -161,35 +107,13 @@ h1 {
         margin: 0 auto;
     }
 
-    .img-me, .img-text-right {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
 
     h1 {
         font-size: 40px;
     }
 
-    .img-text-right h2 {
-        font-size: 28px;
-    }
 }
 
-/* Für 'prefers-color-scheme: dark'-Unterstützung */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #000;
-        color: #fff;
-    }
-
-    .section-top span,
-    .img-text-right h2,
-    .img-text-right p,
-    h1 {
-        color: #ffffff;
-    }
-}
 
 
 

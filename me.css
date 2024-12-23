@@ -32,8 +32,28 @@ body {
     opacity: 0.6;
 }
 
+header a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 23px;
+    color: rgb(214, 214, 214);
+    margin-left: 1em;
+}
+
+header a:hover {
+    color: rgba(100, 149, 237, 0.66);
+}
+
+.header {
+    margin-top: 59px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
 h1 {
-    padding-top: 70px;
+    padding-top: 150px;
     font-size: 80px;
     display: flex;
     justify-content: center;
@@ -42,7 +62,7 @@ h1 {
 }
 
 .links_me {
-    margin-top: 300px;
+    margin-top: 75px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -53,7 +73,7 @@ h1 {
 
 .links_me a {
     color: white;
-    font-size: 48px;
+    font-size: 28px;
     text-decoration: none;
     padding: 8px 19px;
     border-radius: 8px;
