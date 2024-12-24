@@ -8,6 +8,12 @@
     h1 {
         color: rgb(214, 214, 214);
     }
+    h2 {
+        color: rgb(214, 214, 214);
+    }
+    p {
+        color: rgb(214, 214, 214);
+    }
 }
 
 body {
@@ -69,6 +75,28 @@ h1 {
 .section-top span{
     margin-top: 8px;
     font-size: 50px;
+}
+
+h2 {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 6em;
+    font-size: 50px;
+}
+
+.section-bottom {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.section-bottom img{
+    border: 3px solid rgb(214, 214, 214);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    height: 130px;
 }
 
 /* Große Bildschirme */
