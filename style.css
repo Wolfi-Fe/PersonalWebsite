@@ -21,12 +21,6 @@ body {
     font-family: "Oswald", sans-serif;
 }
 
-body {
-    margin: 0;
-    font-family: "Oswald", sans-serif;
-}
-
-
 header a {
     text-decoration: none;
     font-weight: bold;
@@ -46,13 +40,13 @@ header a:hover {
     justify-content: left;
     align-items: center;
 }
-
-body {
+.background {
     background-image: url("img/background.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
 }
+
 
 h1 {
     padding-top: 125px;
