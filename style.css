@@ -181,8 +181,6 @@ footer {
 }
 
 .kontakt-main {
-    margin-bottom: 25.5rem;
-    margin-top: 20.5rem;
     padding: 8rem 2rem 4rem;
     max-height: 100vh;
     display: flex;
@@ -190,6 +188,7 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: var(--dunkles-navy);
+    padding: 35px;
 }
 
 .kontakt-box {
@@ -198,9 +197,9 @@ footer {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--soft-cyan);
-    padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
+    backdrop-filter: blur(6px);
 }
 
 .kontakt-links {
@@ -233,6 +232,17 @@ footer {
     border-color: var(--neon-magenta);
 }
 
+.kontakt-body {
+    overflow: hidden;
+}
+
+.kontakt-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
 .ueber-mich-main {
     padding: 8rem 2rem 4rem;
     min-height: 100vh;
@@ -240,6 +250,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    padding: 20px;
 }
 
 .ueber-box {
@@ -251,6 +262,7 @@ footer {
     border-radius: 12px;
     box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
     color: var(--soft-cyan);
+    backdrop-filter: blur(6px);
 }
 
 .ueber-box h1 {
