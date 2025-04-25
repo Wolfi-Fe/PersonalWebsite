@@ -196,7 +196,7 @@ footer {
     max-width: 900px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--soft-cyan);
+    border: 3px solid var(--soft-cyan);
     border-radius: 12px;
     box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
     backdrop-filter: blur(6px);
@@ -257,7 +257,7 @@ footer {
     max-width: 900px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--soft-cyan);
+    border: 3px solid var(--soft-cyan);
     padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
@@ -315,7 +315,6 @@ footer {
     background-color: var(--dunkles-navy);
     display: flex;
     justify-content: center;
-    backdrop-filter: blur(6px);
 }
 
 .projekt-box {
@@ -326,6 +325,7 @@ footer {
 .jarvis-box {
     width: 100%;
     max-width: 1200px;
+    backdrop-filter: blur(6px);
 }
 
 .projekt-box h1 {
@@ -345,13 +345,23 @@ footer {
 
 .projekt-card {
     background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--soft-cyan);
+    border: 3px solid var(--soft-cyan);
     border-radius: 12px;
     padding: 2rem;
     color: var(--soft-cyan);
     box-shadow: 0 0 12px rgba(0, 229, 255, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     backdrop-filter: blur(6px);
+}
+
+.jarvis-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 3px solid var(--soft-cyan);
+    border-radius: 12px;
+    padding: 2rem;
+    color: var(--soft-cyan);
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .projekt-card:hover {
