@@ -312,7 +312,6 @@ footer {
 .projekt-box {
     width: 100%;
     max-width: 1200px;
-    backdrop-filter: blur(6px);
 }
 
 .projekt-box h1 {
@@ -321,6 +320,7 @@ footer {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
+    filter: brightness(1);
 }
 
 .projekt-grid {
@@ -337,6 +337,7 @@ footer {
     color: var(--soft-cyan);
     box-shadow: 0 0 12px rgba(0, 229, 255, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(6px);
 }
 
 .projekt-card:hover {
