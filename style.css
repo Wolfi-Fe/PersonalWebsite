@@ -314,6 +314,12 @@ footer {
     max-width: 1200px;
 }
 
+.jarvis-box {
+    width: 100%;
+    max-width: 1200px;
+    backdrop-filter: blur(6px);
+}
+
 .projekt-box h1 {
     font-family: 'Orbitron', sans-serif;
     color: var(--neon-blau);
