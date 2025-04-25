@@ -309,6 +309,15 @@ footer {
     justify-content: center;
 }
 
+.jarvis-main {
+    padding: 8rem 2rem 4rem;
+    min-height: 100vh;
+    background-color: var(--dunkles-navy);
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+}
+
 .projekt-box {
     width: 100%;
     max-width: 1200px;
@@ -317,7 +326,6 @@ footer {
 .jarvis-box {
     width: 100%;
     max-width: 1200px;
-    backdrop-filter: blur(6px);
 }
 
 .projekt-box h1 {
