@@ -32,12 +32,11 @@ header h1 {
     letter-spacing: 2px;
 }
 
-/* Navbar Container */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(10, 15, 28, 0.85); /* halbtransparent über Banner */
+    background-color: rgba(10, 15, 28, 0.85);
     backdrop-filter: blur(6px);
     z-index: 1000;
     border-bottom: 1px solid var(--soft-cyan);
@@ -380,3 +379,103 @@ footer {
     font-size: 1rem;
     margin-bottom: 1.5rem;
 }
+
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--soft-cyan);
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(10,15,28,0.95);
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        padding: 1rem;
+        border: 1px solid var(--soft-cyan);
+        border-radius: 8px;
+    }
+
+    .nav-links.nav-active {
+        display: flex;
+    }
+}
+@media (max-width: 768px) {
+    .kontakt-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kontakt-links li a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .kontakt-box {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+
+    }
+}
+@media (max-width: 768px) {
+    .ueber-content {
+        flex-direction: column;
+        align-items: center;
+        margin-right:1.5rem;
+        flex-wrap: wrap;
+    }
+    .ueber-avatar {
+        width: 150px;
+        height: 150px;
+    }
+    .ueber-text {
+        text-align: center;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    .ueber-box {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        width: unset;
+    }
+    .kontakt-footer {
+        position: unset;
+        bottom: unset;
+    }
+    .kontakt-body {
+        overflow: unset;
+    }
+    .hero {
+     height: unset;
+    }
+    .hero h1 {
+        font-size: 40px;
+    }
+}
+
+
+
+
+
+
+
