@@ -1,60 +1,74 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Whitewelpe.de</title>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@600&family=Rajdhani:wght@400;600&family=Titillium+Web:wght@400;600&family=Inter:wght@400;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <script src="menu.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whitewelpe.de</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@600&family=Rajdhani:wght@400;600&family=Titillium+Web:wght@400;600&family=Inter:wght@400;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
-<header class="hero">
-    <div class="hero-content">
-        <div class="runen">ᚹᚯ̈ᛚᚠᛁ</div>
-        <h1>Whitewelpe.de</h1>
-        <p>Software Development, Coding und Design</p>
-        <a href="projekt.html" class="button">Zu den Projekten</a>
+<body class="page">
+
+  <!-- NAV (Burger handled by global menu.js) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">ᚹᚯ̈ᛚᚠᛁ</div>
+
+      <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a class="active" href="index.html">Start</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="projekt.html">Projekte</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="lili.html">Lili</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">ᚹᚯ̈ᛚᚠᛁ</div>
+  <!-- HERO -->
+  <header class="hero hero-home">
+    <div class="hero-overlay"></div>
 
-            <div class="burger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+    <div class="hero-content">
+      <div class="runen">ᚹᚯ̈ᛚᚠᛁ</div>
+      <h1>Whitewelpe.de</h1>
+      <p>Software Development, Coding und Design</p>
 
-            <ul class="nav-links">
-                <li><a href="index.html">Start</a></li>
-                <li><a href="ueber-mich.html">Über mich</a></li>
-                <li><a href="projekt.html">Projekte</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="lili.html">Lili</a></li>
-                <li><a href="impressum.html">Impressum</a></li>
-                <li><a href="datenschutz.html">Datenschutz</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
+      <div class="hero-buttons">
+        <a href="projekt.html" class="button">Zu den Projekten</a>
+        <a href="kontakt.html" class="button button-ghost">Kontakt</a>
+      </div>
+    </div>
+  </header>
 
-<section>
-    <h2>Willkommen bei Whitewelpe</h2>
-    <p>Diese Website ist mein digitales Zuhause – hier findest du Infos über mich, meine Tools, Projekte rund um VRChat, KI, Automatisierung und mehr.</p>
-    <a href="kontakt.html" class="button">Jetzt Kontakt aufnehmen</a>
-</section>
+  <!-- MAIN -->
+  <main class="home-main">
 
-<section>
-    <h2>Aktuelle Projekte</h2>
-    <p>Vom OSC-Tool für VRChat bis zur Serververwaltung auf Linux – hier zeige ich dir, woran ich gerade tüftele.</p>
-</section>
+    <section class="home-box">
+      <h2>Willkommen</h2>
+      <p>
+        Willkommen auf Whitewelpe.de – meiner persönlichen Website für Projekte,
+        Tools und Experimente rund um Software, Server und kreative Technik.
+      </p>
+    </section>
 
-<footer>
-    © 2025 Whitewelpe.de – entwickelt mit Herz und <span class="heart">Seele</span>
-</footer>
+  </main>
 
+  <footer class="site-footer">
+    © 2025 Whitewelpe.de – 🐺
+  </footer>
+
+  <!-- Global JS -->
+  <script src="menu.js"></script>
 </body>
 </html>
