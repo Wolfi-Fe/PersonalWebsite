@@ -1,62 +1,151 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Über mich – Whitewelpe.de</title>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@600&family=Rajdhani:wght@400;600&family=Titillium+Web:wght@400;600&family=Inter:wght@400;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <script src="menu.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Über mich – Whitewelpe.de</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@600&family=Rajdhani:wght@400;600&family=Titillium+Web:wght@400;600&family=Inter:wght@400;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Global & Page CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="ueber-mich.css" />
 </head>
-<body class="kontakt-body">
 
-<nav class="navbar">
+<body class="page">
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
     <div class="nav-container">
-        <div class="nav-logo">ᚹᚯ̈ᛚᚠᛁ</div>
+      <div class="nav-logo">ᚹᚯ̈ᛚᚠᛁ</div>
 
-        <div class="burger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+      <!-- Burger (handled by menu.js) -->
+      <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Start</a></li>
-            <li><a href="ueber-mich.html">Über mich</a></li>
-            <li><a href="projekt.html">Projekte</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-            <li><a href="lili.html">Lili</a></li>
-            <li><a href="impressum.html">Impressum</a></li>
-            <li><a href="datenschutz.html">Datenschutz</a></li>
-        </ul>
+      <ul class="nav-links">
+        <li><a href="index.html">Start</a></li>
+        <li><a class="active" href="ueber-mich.html">Über mich</a></li>
+        <li><a href="projekt.html">Projekte</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="lili.html">Lili</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
     </div>
-</nav>
+  </nav>
 
-
-
-<main style="display: flex; flex-direction: column" class="ueber-mich-main hero">
+  <!-- CONTENT -->
+  <main class="ueber-mich-main">
     <section class="ueber-box">
-        <h1>Wer ist Whitewelpe?</h1>
-        <div class="ueber-content">
-            <img src="./img/Avatar-Cut.png" alt="Whitewelpe Avatar" class="ueber-avatar" />
 
-            <div class="ueber-text">
-                <p><strong>Hey, ich bin Wölfi 👋</strong></p>
-                <p>Ich bin ein kreativer Kopf, Tech-Tüftler und Cyber-Wolf mit Herz für Automatisierung, VRChat, Game-Server und AI. Tagsüber Kfz-Mechatroniker, nachts Coder mit dem Ziel, Software-Entwickler zu werden – am liebsten mit Fokus auf KI, Tools und Sprachsteuerung.</p>
+      <!-- Header: Bild + Name -->
+      <header class="ueber-header">
+        <img
+          src="avatar.jpg"
+          alt="Pascal Gröger"
+          class="ueber-avatar"
+        />
 
-                <p>Meine Lieblingssprachen: <span class="highlight">Python</span>, <span class="highlight">C#</span> und <span class="highlight">JavaScript</span>.
-                    Betriebssysteme? <span class="highlight">NixOS & Windows</span>. Tools? <span class="highlight">JetBrains IDEs</span>, eigene Server & Custom-Tools.</p>
-
-                <p>Vision: Ein eigenes JARVIS-ähnliches System, das zuhört, denkt, spricht – und mich unterstützt. 🧠💬</p>
-            </div>
+        <div class="ueber-title">
+          <h1>Pascal Gröger</h1>
+          <p class="ueber-subtitle">
+            KFZ-Mechatroniker · auf dem Weg in die Softwareentwicklung
+          </p>
         </div>
+      </header>
+
+      <!-- Text -->
+      <div class="ueber-text">
+        <p>
+          Ich bin <span id="alter" class="highlight"></span> und aktuell als
+          <span class="highlight">KFZ-Mechatroniker</span> tätig.
+          Parallel dazu arbeite ich konsequent an meinem Wechsel in die
+          <span class="highlight">Softwareentwicklung</span>.
+        </p>
+
+        <p>
+          Mein aktuelles Ziel ist klar:
+          <span class="highlight">lernen, verstehen und mich weiterentwickeln</span>,
+          bis der Schritt in einen finalen Jobwechsel als Entwickler fachlich
+          und persönlich sinnvoll ist.
+        </p>
+
+        <p>
+          Mein derzeitiger Schwerpunkt liegt auf
+          <span class="highlight">Python</span>,
+          ergänzt durch
+          <span class="highlight">HTML</span> und
+          <span class="highlight">JavaScript</span>,
+          insbesondere für Web- und Tool-basierte Projekte.
+        </p>
+
+        <p>
+          Zusätzlich betreibe ich eigene Infrastruktur:
+          einen <span class="highlight">dedizierten Server</span> mit eigener Cloud,
+          eigenem E-Mail-Server, Game-Servern sowie Website-Hosting.
+          Das gesamte System läuft auf einem für mich optimierten
+          <span class="highlight">NixOS-Setup</span>.
+        </p>
+
+        <p>
+          Meine Projekte – darunter diese Website – dienen mir sowohl als
+          Lernplattform als auch als Portfolio.
+          Ich arbeite strukturiert, lösungsorientiert und mit dem Anspruch,
+          Systeme wirklich zu verstehen.
+        </p>
+      </div>
+
+      <!-- Cards -->
+      <section class="ueber-cards">
+
+        <article class="card">
+          <h2>Skills</h2>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">HTML</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Projekte & Infrastruktur</h2>
+          <div class="tags">
+            <span class="tag">Whitewelpe.de</span>
+            <span class="tag">Eigener Server</span>
+            <span class="tag">Cloud</span>
+            <span class="tag">Mail</span>
+            <span class="tag">Game-Server</span>
+            <span class="tag">Hosting</span>
+            <span class="tag">NixOS</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Ziel</h2>
+          <p class="muted">
+            Nachhaltiger Kompetenzaufbau und der Wechsel in einen
+            professionellen Job als Softwareentwickler.
+          </p>
+        </article>
+
+      </section>
+
     </section>
+  </main>
 
-</main>
-
-<footer class="kontakt-footer">
+  <!-- FOOTER -->
+  <footer class="site-footer">
     © 2025 Whitewelpe.de – 🐺
-</footer>
+  </footer>
+
+  <!-- JS -->
+  <script src="menu.js"></script>
+  <script src="ueber-mich.js"></script>
 
 </body>
 </html>
