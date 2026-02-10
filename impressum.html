@@ -1,77 +1,65 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impressum – Whitewelpe.de</title>
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@600&family=Rajdhani:wght@400;600&family=Titillium+Web:wght@400;600&family=Inter:wght@400;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <script src="menu.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impressum – Whitewelpe.de</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@600&family=Rajdhani:wght@400;600&family=Titillium+Web:wght@400;600&family=Inter:wght@400;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
+<body class="page">
 <nav class="navbar">
-  <div class="nav-container">
-    <div class="nav-logo">ᚹᚯ̈ᛚᚠᛁ</div>
+    <div class="nav-container">
+        <div class="nav-logo">ᚹᚯ̈ᛚᚠᛁ</div>
 
-    <div class="burger">
-      <div></div>
-      <div></div>
-      <div></div>
+        <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a href="projekt.html">Projekte</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="lili.html">Lili</a></li>
+            <li><a class="active" href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
     </div>
-
-    <ul class="nav-links">
-      <li><a href="index.html">Start</a></li>
-      <li><a href="ueber-mich.html">Über mich</a></li>
-      <li><a href="projekt.html">Projekte</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-      <li><a href="lili.html">Lili</a></li>
-      <li><a href="impressum.html">Impressum</a></li>
-      <li><a href="datenschutz.html">Datenschutz</a></li>
-    </ul>
-  </div>
 </nav>
 
-
 <main class="projekt-main">
-  <section class="projekt-box">
-    <h1>📄 Impressum</h1>
+    <section class="projekt-box">
+        <h1>Impressum</h1>
 
-    <p><strong>Angaben gemäß § 5 TMG:</strong></p>
-    <p>
-      Pascal Gröger<br>
-      Dorfstraße 35<br>
-      89281 Altenstadt/Herrenstetten<br>
-      Deutschland
-    </p>
+        <p><strong>Angaben gemäß § 5 TMG</strong></p>
+        <p>
+            Pascal Gröger<br>
+            Dorfstraße 35<br>
+            89281 Altenstadt/Herrenstetten
+        </p>
 
-    <p><strong>Kontakt:</strong><br>
-      E-Mail: kontakt@whitewelpe.de
-    </p>
+        <p><strong>Kontakt</strong></p>
+        <p>E-Mail: kontakt@whitewelpe.de</p>
 
-    <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>
-      Pascal Gröger<br>
-      Anschrift wie oben
-    </p>
+        <p><strong>Nutzung der Kontaktdaten</strong><br>
+            Die veröffentlichten Kontaktdaten dürfen nicht ohne ausdrückliche Zustimmung zur Übersendung von
+            nicht ausdrücklich angeforderter Werbung und Informationsmaterialien verwendet werden.
+        </p>
 
-    <p><strong>Haftungsausschluss:</strong><br>
-      Diese Website dient ausschließlich privaten und nicht-kommerziellen Zwecken. Trotz sorgfältiger inhaltlicher Kontrolle wird keine Haftung für die Inhalte externer Links übernommen. Für den Inhalt verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.
-    </p>
-
-    
-
-    <p><strong>Persönlicher Schutz & Besuchsverbot:</strong><br>
-      Der Betreiber dieser Website untersagt ausdrücklich unangekündigte persönliche Besuche, Kontaktversuche an der Wohnadresse sowie jegliche Form physischer Belästigung. Die genannte Anschrift dient ausschließlich der gesetzlichen Impressumspflicht. Bei Zuwiderhandlung wird ohne Vorwarnung Anzeige erstattet. Bitte respektieren Sie die Privatsphäre des Betreibers.
-    </p>
-
-    <a href="index.html" class="button">Zurück zur Startseite</a>
-  </section>
+        <p><strong>Persönlicher Schutz & Besuchsverbot</strong><br>
+            Unangekündigte persönliche Besuche sowie Kontaktversuche an der Wohnadresse sind untersagt.
+            Die Anschrift dient ausschließlich der gesetzlichen Impressumspflicht.
+            Bei Zuwiderhandlung wird Anzeige erstattet.
+        </p>
+    </section>
 </main>
 
-<footer>
-  © 2025 Whitewelpe.de – 🐺
-</footer>
+<footer class="site-footer">© 2025 Whitewelpe.de – 🐺</footer>
 
+<script src="menu.js"></script>
 </body>
 </html>
 

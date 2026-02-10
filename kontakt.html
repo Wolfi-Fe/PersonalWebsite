@@ -4,27 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kontakt – Whitewelpe.de</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@600&family=Rajdhani:wght@400;600&family=Titillium+Web:wght@400;600&family=Inter:wght@400;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-    <script src="menu.js"></script>
 </head>
-<body class="kontakt-body">
 
+<body class="page">
+
+<!-- NAV -->
 <nav class="navbar">
     <div class="nav-container">
         <div class="nav-logo">ᚹᚯ̈ᛚᚠᛁ</div>
 
-        <div class="burger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <button class="burger" type="button" aria-label="Menü öffnen">
+            <span></span><span></span><span></span>
+        </button>
 
         <ul class="nav-links">
             <li><a href="index.html">Start</a></li>
             <li><a href="ueber-mich.html">Über mich</a></li>
             <li><a href="projekt.html">Projekte</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a class="active" href="kontakt.html">Kontakt</a></li>
             <li><a href="lili.html">Lili</a></li>
             <li><a href="impressum.html">Impressum</a></li>
             <li><a href="datenschutz.html">Datenschutz</a></li>
@@ -32,23 +32,27 @@
     </div>
 </nav>
 
-
-<main class="kontakt-main hero">
+<!-- MAIN (CENTERED) -->
+<main class="kontakt-center">
     <section class="kontakt-box">
-        <h1>Kontaktiere mich</h1>
-        <p>Hier findest du alle Wege, mich zu erreichen oder meine Arbeit zu verfolgen:</p>
+        <h1>Kontakt</h1>
+
+        <p class="muted" style="text-align:center;">
+            Kein Formular – direkte Wege zu mir:
+        </p>
 
         <ul class="kontakt-links">
-            <li><a href="mailto:wolfi@whitewelpe.de" target="_blank">📧 E-Mail</a></li>
-            <li><a href="https://github.com/Wolfi-Fe" target="_blank">🐙 GitHub</a></li>
-            <li><a href="https://discord.com/users/1291430071982096435" target="_blank">💬 Discord</a></li>
+            <li><a href="mailto:kontakt@whitewelpe.de">📧 E-Mail</a></li>
+            <li><a href="https://github.com/AssiWelpe" target="_blank" rel="noopener">🐙 GitHub</a></li>
+            <li><a href="#" title="Discord folgt">💬 Discord</a></li>
         </ul>
     </section>
 </main>
 
-<footer class="kontakt-footer">
+<footer class="site-footer">
     © 2025 Whitewelpe.de – 🐺
 </footer>
 
+<script src="menu.js"></script>
 </body>
 </html>

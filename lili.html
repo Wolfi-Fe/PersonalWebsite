@@ -1,69 +1,73 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Für Lili – Mein Herz auf vier Pfoten</title>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'EB Garamond', serif;
-      background: #0A0F1C;
-      color: #ffffff;
-      line-height: 1.6;
-      text-align: center;
-    }
-    header {
-      background: linear-gradient(to bottom, #0A0F1C, #0A0F1C);
-      padding: 2rem 1rem;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    .lili-image {
-      max-width: 80%;
-      aspect-ratio: 1/1;
-      border-radius: 20px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    }
-    .poem {
-      padding: 2rem;
-      white-space: pre-line;
-      font-size: 1.2rem;
-    }
-    .footer-paw {
-      font-size: 3rem;
-      margin-top: 2rem;
-      opacity: 0.3;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Für Lili – Whitewelpe.de</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rajdhani:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
-<header>
-  <h1>Für Lili – Mein Herz auf vier Pfoten</h1>
-  <img src="./img/Lili%20auf%20der%20Wolke.png" alt="Lili auf ihrer Wolke" class="lili-image"/>
-</header>
+<body class="page">
 
-<section class="poem">
-  <h2>Wenn Pfoten Spuren im Herzen hinterlassen</h2>
-  <p>
-    Du kamst auf leisen Sohlen,
-    ein Wirbel aus Licht und Fell,
-    und wo ich stürzte, hast du gewartet –
-    treu, geduldig, hell.
+<!-- NAV -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">ᚹᚯ̈ᛚᚠᛁ</div>
 
-    In dunklen Tagen warst du Sonne,
-    ein Blick – und alles stand still.
-    Jetzt wachst du aus den Wolken,
-    und mein Herz ruft einfach: **Lili**. 🐾
-  </p>
-</section>
+        <button class="burger" type="button" aria-label="Menü öffnen">
+            <span></span><span></span><span></span>
+        </button>
 
-<div class="footer-paw">🐾</div><br>
-<div><a  href="impressum.html">Impressum</a><a  href="datenschutz.html">Datenschutz</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a href="projekt.html">Projekte</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a class="active" href="lili.html">Lili</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+    </div>
+</nav>
 
+<!-- MAIN -->
+<main class="page-wrap">
+    <section class="box lili-box">
+        <h1>Für Lili – Mein Herz auf vier Pfoten</h1>
+
+        <img
+                class="lili-image"
+                src="img/Lili%20auf%20der%20Wolke.png"
+                alt="Lili auf ihrer Wolke"
+                loading="lazy"
+        />
+
+        <h2>Wenn Pfoten Spuren im Herzen hinterlassen</h2>
+
+        <div class="lili-poem">
+            <p>
+                Du kamst auf leisen Sohlen, ein Wirbel aus Licht und Fell, und wo ich stürzte,
+                hast du gewartet – treu, geduldig, hell.
+            </p>
+            <p>
+                In dunklen Tagen warst du Sonne, ein Blick – und alles stand still.
+                Jetzt wachst du aus den Wolken, und mein Herz ruft einfach: <strong>Lili</strong>.
+            </p>
+        </div>
+
+        <div class="lili-links">
+            <!--   <a class="link" href="impressum.html">Impressum →</a>
+               <a class="link" href="datenschutz.html">Datenschutz →</a>-->
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    © 2025 Whitewelpe.de
+</footer>
+
+<script src="menu.js"></script>
 </body>
 </html>

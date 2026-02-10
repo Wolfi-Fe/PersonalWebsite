@@ -1,87 +1,120 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projekte – Whitewelpe.de</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekte – Whitewelpe.de</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@600&family=Rajdhani:wght@400;600&family=Titillium+Web:wght@400;600&family=Inter:wght@400;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <script src="menu.js"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@600&family=Rajdhani:wght@400;600&family=Titillium+Web:wght@400;600&family=Inter:wght@400;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
+<body class="page">
+
+<!-- NAVBAR -->
 <nav class="navbar">
-  <div class="nav-container">
-    <div class="nav-logo">ᚹᚯ̈ᛚᚠᛁ</div>
+    <div class="nav-container">
+        <div class="nav-logo">ᚹᚯ̈ᛚᚠᛁ</div>
 
-    <div class="burger">
-      <div></div>
-      <div></div>
-      <div></div>
+        <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="ueber-mich.html">Über mich</a></li>
+            <li><a class="active" href="projekt.html">Projekte</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="lili.html">Lili</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
     </div>
-
-    <ul class="nav-links">
-      <li><a href="index.html">Start</a></li>
-      <li><a href="ueber-mich.html">Über mich</a></li>
-      <li><a href="projekt.html">Projekte</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-      <li><a href="lili.html">Lili</a></li>
-      <li><a href="impressum.html">Impressum</a></li>
-      <li><a href="datenschutz.html">Datenschutz</a></li>
-    </ul>
-  </div>
 </nav>
 
+<!-- MAIN -->
+<main class="projekt-main">
+    <section class="projekt-box">
+        <h1>Projekte</h1>
 
-<main class="projekt-main hero">
-  <section class="projekt-box">
-    <h1>Meine Projekte</h1>
-    <div class="projekt-grid">
+        <p class="muted" style="text-align:center;">
+            Eine Auswahl meiner aktuellen Projekte, Systeme und Experimente.
+        </p>
 
-      <div class="projekt-card">
-        <h2>Mein Discord Server</h2>
-        <p>Whitewelpe.de
-          <br> Ein Discord-Server von mir für Jeden :))</p>
-        <a href="https://discord.gg/dvx994G8Mg" target="_blank" class="button">Zum Server</a>
-      </div>
+        <!-- GRID -->
+        <div class="projekt-grid">
 
-      <div class="projekt-card">
-        <h2>🧠 JARVIS-Controller</h2>
-        <p>Ein KI-gesteuertes Steuerungs-Interface für VRChat mit UDP, OSC & Voice Integration.</p>
-        <a href="jarvis.html" class="button">Mehr über den JARVIS-Controller</a>
-      </div>
+            <!-- Projekt 1 -->
+            <article class="projekt-card">
+                <h2>Whitewelpe.de</h2>
+                <p>
+                    Meine persönliche Website als Portfolio, Lernplattform und
+                    zentrale Anlaufstelle für meine Projekte.
+                </p>
+            </article>
 
-      <div class="projekt-card">
-        <h2>🎮 Minecraft Multiserver</h2>
-        <p>Dedizierter Server mit mehreren Instanzen, Plugins und Web-Dashboard für Freunde & Community. <br> IP = mc.whitewelpe.de</p>
-      </div>
+            <!-- Projekt 2 -->
+            <article class="projekt-card">
+                <h2>Eigener Server · NixOS</h2>
+                <p>
+                    Eigene Infrastruktur mit NixOS:
+                    Cloud, Mailserver, Game-Server, Website-Hosting
+                    und vollständige Eigenverwaltung.
+                </p>
+            </article>
 
-      <div class="projekt-card">
-        <h2>🌐 whitewelpe.de</h2>
-        <p>Diese Website – mit Styleguide, animierter Navigation, Runen-Deko und allem was dazugehört.</p>
-      </div>
+            <!-- Projekt 3 -->
+            <article class="projekt-card">
+                <h2>VR / Tooling & Automation</h2>
+                <p>
+                    Eigene Tools und Skripte für Automatisierung,
+                    Experimente mit VRChat, OSC, Steuerung und Systemintegration.
+                </p>
+            </article>
 
-      <div class="projekt-card">
-        <h2>👾 Me and The Boys</h2>
-        <p>Eine spaßige, stilisierte Website für Freunde und starkem Gruppenfokus.</p>
-        <a href="https://meandtheboys.eu" target="_blank" class="button">Zur Website</a>
-      </div>
+            <!-- Projekt 4 -->
+            <article class="projekt-card">
+                <h2>Helpers Creation Cave</h2>
+                <p>
+                    Discord-Server mit Fokus auf Wissensaustausch zu
+                    Blender, Unity, Substance Painter,
+                    Avataren und Asset-Erstellung.
+                </p>
+            </article>
 
-      <div class="projekt-card">
-        <h2>🛠️ Helpers Creation Cave</h2>
-        <p>von MaxTGames <img src="./img/maxtgames.webp" alt="Sticker" width="23" height="auto">
-          <br> Ein Discord-Server für Blender-, Unity- und Substance-Painter-Enthusiasten mit Fokus auf Tipps, Avatarbau und Asset-Sharing.</p>
-        <a href="https://discord.gg/2eAHqTXBFK" target="_blank" class="button">Zum Server</a>
-      </div>
+            <!-- Projekt 5 -->
+            <article class="projekt-card">
+                <h2>Me and The Boys</h2>
+                <p>
+                    Website-Projekt für ein Team-/Community-Umfeld
+                    mit eigenem Design und Struktur.
+                </p>
+            </article>
 
-    </div>
-  </section>
+            <!-- Platzhalter -->
+            <article class="projekt-card">
+                <h2>Weitere Projekte</h2>
+                <p>
+                    Weitere Experimente, Tools und Systeme sind in Planung
+                    und werden hier ergänzt.
+                </p>
+            </article>
+
+        </div>
+    </section>
 </main>
 
-<footer>
-  © 2025 Whitewelpe.de – 🐺
+<!-- FOOTER -->
+<footer class="site-footer">
+    © 2025 Whitewelpe.de – 🐺
 </footer>
 
+<!-- Global JS -->
+<script src="menu.js"></script>
 </body>
 </html>

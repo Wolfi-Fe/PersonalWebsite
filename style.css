@@ -1,337 +1,519 @@
 /* ======================================================
    Whitewelpe.de – GLOBAL STYLE.CSS
-   Neon-Cyber · Runen · Clean · Responsive
+   Neon-Cyber meets Runen-Vibes (clean & consistent)
+   Works for: index, ueber-mich, projekt, kontakt, lili,
+              impressum, datenschutz
    ====================================================== */
 
 /* =========================
    THEME VARIABLEN
    ========================= */
 :root {
-  --neon-blau: #00E5FF;
-  --neon-lila: #B388FF;
-  --neon-magenta: #FF00C8;
-  --soft-cyan: #66FCF1;
-  --dunkles-navy: #0A0F1C;
+    --neon-blau: #00E5FF;
+    --neon-lila: #B388FF;
+    --neon-magenta: #FF00C8;
+    --soft-cyan: #66FCF1;
+    --dunkles-navy: #0A0F1C;
 
-  --glass: rgba(255,255,255,0.02);
-  --glass-strong: rgba(10,15,28,0.9);
+    --glass: rgba(255, 255, 255, 0.02);
+    --glass-strong: rgba(10, 15, 28, 0.92);
 
-  --border-cyan: rgba(102,252,241,0.65);
-  --shadow-cyan: rgba(0,229,255,0.2);
-  --shadow-magenta: rgba(255,0,200,0.25);
+    --border-cyan: rgba(102, 252, 241, 0.65);
+    --shadow-cyan: rgba(0, 229, 255, 0.20);
+    --shadow-magenta: rgba(255, 0, 200, 0.22);
+
+    --radius: 14px;
 }
 
 /* =========================
    RESET & BASIS
    ========================= */
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-body { overflow-x: hidden; }
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
 
 body.page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: var(--dunkles-navy);
-  color: var(--soft-cyan);
-  font-family: "Inter","Source Sans Pro",sans-serif;
-  line-height: 1.65;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--dunkles-navy);
+    color: var(--soft-cyan);
+    font-family: "Inter", "Source Sans Pro", sans-serif;
+    line-height: 1.65;
 }
 
 main { flex: 1; }
 
 a { color: inherit; }
 
+p { margin: 0 0 1rem; }
+
 /* =========================
    HELFER
    ========================= */
 .highlight {
-  color: var(--neon-magenta);
-  font-weight: 700;
+    color: var(--neon-magenta);
+    font-weight: 700;
+}
+
+.muted {
+    color: rgba(102, 252, 241, 0.85);
 }
 
 .link {
-  display: inline-block;
-  margin-top: .75rem;
-  font-family: "Rajdhani","Titillium Web",sans-serif;
-  font-weight: 700;
-  text-decoration: none;
-  color: var(--soft-cyan);
+    display: inline-block;
+    margin-top: .75rem;
+    font-family: "Rajdhani", "Titillium Web", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--soft-cyan);
 }
 .link:hover { color: var(--neon-magenta); }
+
+/* =========================
+   BUTTONS (GLOBAL)
+   ========================= */
+.button {
+    display: inline-block;
+    padding: .78rem 1.18rem;
+    border-radius: 12px;
+    border: 1px solid var(--soft-cyan);
+    background: rgba(0, 229, 255, 0.12);
+    font-family: "Rajdhani", "Titillium Web", sans-serif;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    color: var(--soft-cyan);
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px var(--shadow-magenta);
+    background: rgba(255, 0, 200, 0.18);
+    border-color: var(--neon-magenta);
+}
+
+.button-ghost {
+    background: rgba(0, 229, 255, 0.08);
+}
+.button-ghost:hover {
+    background: var(--neon-magenta);
+    border-color: var(--neon-magenta);
+    color: #fff;
+}
 
 /* =========================
    NAVBAR (GLOBAL)
    ========================= */
 .navbar {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background: rgba(10,15,28,0.85);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-cyan);
-  z-index: 2000;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 15, 28, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-cyan);
+    z-index: 2000;
 }
 
+/* Fix: auf Hero-Seiten soll Navbar identisch wirken wie auf Content-Seiten */
 .has-hero .navbar {
-  background: rgba(10,15,28,0.92);
-  backdrop-filter: blur(12px);
+    background: rgba(10, 15, 28, 0.92);
+    backdrop-filter: blur(12px);
 }
 
 .nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: .75rem 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: .75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
 
 .nav-logo {
-  font-family: "Orbitron","Audiowide",sans-serif;
-  color: var(--neon-lila);
-  letter-spacing: 2px;
-  font-size: 1.2rem;
-  user-select: none;
+    font-family: "Orbitron", "Audiowide", sans-serif;
+    color: var(--neon-lila);
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    user-select: none;
 }
 
-/* Desktop Links */
+/* Links (Desktop) */
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.25rem;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
-  font-family: "Rajdhani","Titillium Web",sans-serif;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--soft-cyan);
-  transition: color .25s ease, text-shadow .25s ease;
+    font-family: "Rajdhani", "Titillium Web", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--soft-cyan);
+    transition: color .25s ease, text-shadow .25s ease;
 }
 
 .nav-links a:hover {
-  color: var(--neon-magenta);
-  text-shadow: 0 0 10px rgba(255,0,200,0.35);
+    color: var(--neon-magenta);
+    text-shadow: 0 0 10px rgba(255, 0, 200, 0.35);
 }
 
 .nav-links a.active {
-  color: var(--neon-magenta);
+    color: var(--neon-magenta);
 }
 
 /* Burger */
 .burger {
-  display: none;
-  border: 1px solid rgba(102,252,241,0.6);
-  background: rgba(0,229,255,0.08);
-  border-radius: 10px;
-  padding: .55rem .6rem;
-  cursor: pointer;
+    display: none;
+    border: 1px solid rgba(102, 252, 241, 0.6);
+    background: rgba(0, 229, 255, 0.08);
+    border-radius: 10px;
+    padding: .55rem .6rem;
+    cursor: pointer;
 }
 
 .burger span {
-  display: block;
-  width: 26px;
-  height: 3px;
-  background: var(--soft-cyan);
-  margin: 5px 0;
-  transition: transform .25s ease, opacity .25s ease;
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: var(--soft-cyan);
+    margin: 5px 0;
+    transition: transform .25s ease, opacity .25s ease;
 }
 
-.burger.toggle span:nth-child(1) {
-  transform: rotate(45deg) translate(6px,6px);
-}
-.burger.toggle span:nth-child(2) {
-  opacity: 0;
-}
-.burger.toggle span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px,-6px);
-}
+/* Burger -> X animation (menu.js toggles .toggle) */
+.burger.toggle span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+.burger.toggle span:nth-child(2) { opacity: 0; }
+.burger.toggle span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
 
-/* Mobile Nav */
+/* Mobile dropdown (menu.js toggles .nav-active on .nav-links) */
 @media (max-width: 900px) {
-  .burger { display: inline-block; }
+    .burger { display: inline-block; }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: .9rem;
-    position: absolute;
-    top: calc(100% + 10px);
-    right: 1rem;
-    width: min(320px, calc(100vw - 2rem));
-    padding: 1rem;
-    background: var(--glass-strong);
-    border: 1px solid var(--soft-cyan);
-    border-radius: 14px;
-    box-shadow: 0 0 22px var(--shadow-cyan);
-  }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: .9rem;
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 1rem;
+        width: min(340px, calc(100vw - 2rem));
+        padding: 1rem;
+        background: var(--glass-strong);
+        border: 1px solid var(--soft-cyan);
+        border-radius: var(--radius);
+        box-shadow: 0 0 22px var(--shadow-cyan);
+    }
 
-  .nav-links.nav-active {
-    display: flex;
-  }
+    .nav-links.nav-active {
+        display: flex;
+    }
 }
 
 /* =========================
-   BUTTONS
-   ========================= */
-.button {
-  display: inline-block;
-  padding: .75rem 1.15rem;
-  border-radius: 12px;
-  border: 1px solid var(--soft-cyan);
-  background: rgba(0,229,255,0.12);
-  font-family: "Rajdhani","Titillium Web",sans-serif;
-  font-weight: 700;
-  text-decoration: none;
-  color: var(--soft-cyan);
-  transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 18px var(--shadow-magenta);
-  background: rgba(255,0,200,0.18);
-  border-color: var(--neon-magenta);
-}
-
-.button-ghost {
-  background: rgba(0,229,255,0.08);
-}
-
-/* =========================
-   STARTSEITE / HERO
+   HERO (INDEX)
    ========================= */
 .hero-home {
-  position: relative;
-  min-height: 75vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: url("banner.png") center / cover no-repeat;
+    position: relative;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    /* Dein Banner */
+    background: url("/img/banner.png") center / cover no-repeat;
 }
 
 .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(10,15,28,0.65);
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 15, 28, 0.65);
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-  padding: 6rem 2rem 3rem;
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    padding: 6rem 2rem 3rem;
 }
 
 .runen {
-  font-family: "Orbitron","Audiowide",sans-serif;
-  color: var(--neon-lila);
-  letter-spacing: 6px;
-  margin-bottom: .75rem;
+    font-family: "Orbitron", "Audiowide", sans-serif;
+    color: var(--neon-lila);
+    letter-spacing: 6px;
+    margin-bottom: .75rem;
 }
 
 .hero-home h1 {
-  font-family: "Orbitron","Audiowide",sans-serif;
-  color: var(--neon-blau);
-  margin: .25rem 0 .75rem;
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-family: "Orbitron", "Audiowide", sans-serif;
+    color: var(--neon-blau);
+    margin: .25rem 0 .75rem;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
 }
 
 .hero-home p {
-  font-family: "Rajdhani","Titillium Web",sans-serif;
-  color: var(--soft-cyan);
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
-  margin-bottom: 1.5rem;
+    font-family: "Rajdhani", "Titillium Web", sans-serif;
+    color: var(--soft-cyan);
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    margin: 0 0 1.5rem;
 }
 
 .hero-buttons {
-  display: flex;
-  gap: .85rem;
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    gap: .85rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-/* Mobile Hero Fix */
+/* Fix: Mobile Hero kompakter & balanced */
 @media (max-width: 520px) {
-  .hero-home { min-height: 60vh; }
-  .hero-content { padding: 4.5rem 1.25rem 2rem; }
-  .hero-home h1 { font-size: 2rem; }
-  .hero-home p { font-size: 1.1rem; }
-  .runen { letter-spacing: 4px; }
+    .hero-home { min-height: 60vh; }
+    .hero-content { padding: 4.5rem 1.25rem 2rem; }
+    .hero-home h1 { font-size: 2rem; }
+    .hero-home p { font-size: 1.1rem; }
+    .runen { letter-spacing: 4px; }
+    .hero-buttons { gap: .6rem; }
 }
 
 /* =========================
-   CONTENT BOXEN (GLOBAL)
+   SEITEN-LAYOUT (GLOBAL BOX)
    ========================= */
+.page-wrap {
+    padding: 2rem 2rem 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    width: 100%;
+    max-width: 900px;
+    background: var(--glass);
+    border: 3px solid var(--soft-cyan);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 0 12px var(--shadow-cyan);
+    backdrop-filter: blur(6px);
+}
+
+.box h1, .box h2 {
+    font-family: "Orbitron", sans-serif;
+    color: var(--neon-blau);
+    margin: 0 0 1rem;
+    text-align: center;
+}
+
+/* =========================
+   HEADLINE OVERFLOW FIX
+   ========================= */
+
+h1, h2 {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+
+/* Kompatibilität zu deinen bisherigen Klassen */
 .home-main,
 .ueber-mich-main,
 .kontakt-main,
 .projekt-main {
-  padding: 2rem 2rem 5rem;
-  display: flex;
-  justify-content: center;
+    padding: 2rem 2rem 5rem;
+    display: flex;
+    justify-content: center;
 }
 
 .home-box,
 .ueber-box,
 .kontakt-box,
 .projekt-box {
-  width: 100%;
-  max-width: 900px;
-  background: var(--glass);
-  border: 3px solid var(--soft-cyan);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 0 12px var(--shadow-cyan);
-  backdrop-filter: blur(6px);
+    width: 100%;
+    max-width: 900px;
+    background: var(--glass);
+    border: 3px solid var(--soft-cyan);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 0 12px var(--shadow-cyan);
+    backdrop-filter: blur(6px);
 }
 
-/* Überschriften */
 .home-box h2,
 .ueber-box h1,
 .kontakt-box h1,
 .projekt-box h1 {
-  font-family: "Orbitron",sans-serif;
-  color: var(--neon-blau);
-  margin-bottom: 1rem;
-  text-align: center;
+    font-family: "Orbitron", sans-serif;
+    color: var(--neon-blau);
+    margin: 0 0 1rem;
+    text-align: center;
 }
 
 /* =========================
-   KONTAKT
+   KONTAKT (Buttons/Links)
    ========================= */
 .kontakt-links {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0 0;
-  display: flex;
-  gap: .85rem;
-  flex-wrap: wrap;
-  justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    display: flex;
+    gap: .85rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
+.kontakt-links li { margin: 0; }
+
 .kontakt-links a {
-  width: 220px;
-  text-align: center;
-  padding: .85rem 1rem;
-  border-radius: 12px;
-  border: 1px solid var(--soft-cyan);
-  background: rgba(0,229,255,0.1);
-  text-decoration: none;
-  font-family: "Rajdhani",sans-serif;
-  font-weight: 800;
-  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    width: 220px;
+    text-align: center;
+    padding: .85rem 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--soft-cyan);
+    background: rgba(0, 229, 255, 0.10);
+    text-decoration: none;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 900;
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
 }
 
 .kontakt-links a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 18px var(--shadow-magenta);
-  background: rgba(255,0,200,0.18);
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px var(--shadow-magenta);
+    background: rgba(255, 0, 200, 0.18);
+    border-color: var(--neon-magenta);
+}
+
+/* =========================
+   KONTAKT – ZENTRIERT
+   ========================= */
+
+.kontakt-center {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem 5rem;
+}
+
+/* =========================
+   LILI – Andenken Seite
+   ========================= */
+
+.lili-box h2{
+    font-family: "Orbitron", sans-serif;
+    color: var(--neon-blau);
+    margin: 1.25rem 0 0.75rem;
+    text-align: center;
+}
+
+.lili-image{
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    margin: 1.25rem auto 1.5rem;
+    border-radius: var(--radius);
+    border: 2px solid rgba(102, 252, 241, 0.65);
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.18);
+}
+
+.lili-poem{
+    background: rgba(0, 229, 255, 0.06);
+    border: 1px solid rgba(102, 252, 241, 0.45);
+    border-left: 4px solid var(--neon-lila);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+}
+
+.lili-poem p{
+    margin: 0 0 0.85rem;
+    font-family: "Inter", "Source Sans Pro", sans-serif;
+}
+
+.lili-poem p:last-child{
+    margin-bottom: 0;
+}
+
+.lili-links{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.25rem;
+}
+
+/* Mobile Feinschliff */
+@media (max-width: 520px){
+    .lili-poem{ padding: 1rem; }
+    .lili-image{ max-width: 100%; }
+}
+
+
+/* Mobile Feinschliff */
+@media (max-width: 520px) {
+    .kontakt-center {
+        padding: 2rem 1.25rem 4rem;
+    }
+    h1 {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+}
+
+/* Mobile: volle Breite */
+@media (max-width: 520px) {
+    .kontakt-links a { width: 100%; }
+}
+
+/* =========================
+   PROJEKTE – GRID/KACHELN
+   ========================= */
+.projekt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.projekt-card {
+    background: rgba(0, 229, 255, 0.06);
+    border: 1px solid var(--border-cyan);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.projekt-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 18px var(--shadow-magenta);
+}
+
+.projekt-card h2 {
+    margin: 0 0 .75rem;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.35rem;
+    color: var(--neon-lila);
+    text-align: left;
+}
+
+.projekt-card p {
+    margin: 0 0 .9rem;
+}
+
+/* Tablet/Mobile: 1 Spalte */
+@media (max-width: 900px) {
+    .projekt-grid { grid-template-columns: 1fr; }
 }
 
 /* =========================
@@ -339,66 +521,66 @@ a { color: inherit; }
    ========================= */
 .site-footer,
 footer {
-  text-align: center;
-  padding: 1.5rem 1rem;
-  color: var(--neon-lila);
-  border-top: 1px solid var(--border-cyan);
-  background: rgba(10,15,28,0.92);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    color: var(--neon-lila);
+    border-top: 1px solid var(--border-cyan);
+    background: rgba(10, 15, 28, 0.92);
 }
 
 /* =========================
-   RESPONSIVE GLOBAL
+   RESPONSIVE BREAKPOINTS
+   (wie Über-mich-Style)
    ========================= */
+/* Tablet */
 @media (max-width: 900px) {
-  .home-main,
-  .ueber-mich-main,
-  .kontakt-main,
-  .projekt-main {
-    padding: 2rem 1.5rem 4rem;
-  }
+    .home-main,
+    .ueber-mich-main,
+    .kontakt-main,
+    .projekt-main,
+    .page-wrap {
+        padding: 2rem 1.5rem 4rem;
+    }
 
-  .home-box,
-  .ueber-box,
-  .kontakt-box,
-  .projekt-box {
-    padding: 1.75rem;
-  }
+    .home-box,
+    .ueber-box,
+    .kontakt-box,
+    .projekt-box,
+    .box {
+        padding: 1.75rem;
+    }
 }
 
+/* Mobile */
 @media (max-width: 520px) {
-  .home-main,
-  .ueber-mich-main,
-  .kontakt-main,
-  .projekt-main {
-    padding: 2rem 1.25rem 3.5rem;
-  }
+    .home-main,
+    .ueber-mich-main,
+    .kontakt-main,
+    .projekt-main,
+    .page-wrap {
+        padding: 2rem 1.25rem 3.5rem;
+    }
 
-  .home-box,
-  .ueber-box,
-  .kontakt-box,
-  .projekt-box {
-    padding: 1.25rem;
-    border-width: 2px;
-  }
-
-  .kontakt-links a {
-    width: 100%;
-  }
+    .home-box,
+    .ueber-box,
+    .kontakt-box,
+    .projekt-box,
+    .box {
+        padding: 1.25rem;
+        border-width: 2px;
+    }
 }
 
-/* Ultrawide */
+/* Ultrawide / 4K */
 @media (min-width: 1600px) {
-  .nav-container { max-width: 1400px; }
-  .hero-content { max-width: 1100px; }
-  .home-box,
-  .ueber-box,
-  .kontakt-box,
-  .projekt-box {
-    max-width: 1000px;
-  }
+    .nav-container { max-width: 1400px; }
+    .hero-content { max-width: 1100px; }
+
+    .home-box,
+    .ueber-box,
+    .kontakt-box,
+    .projekt-box,
+    .box {
+        max-width: 1000px;
+    }
 }
-
-
-
-
-
