@@ -1,0 +1,292 @@
+/* ----------------------------
+   Whitewelpe.de – Über mich
+   Voll responsiv: Mobile -> 4K
+----------------------------- */
+
+/* Styleguide Colors */
+:root {
+  --neon-blau: #00E5FF;
+  --neon-lila: #B388FF;
+  --dunkles-navy: #0A0F1C;
+  --neon-magenta: #FF00C8;
+  --soft-cyan: #66FCF1;
+
+  --glass: rgba(255, 255, 255, 0.02);
+  --glass-strong: rgba(10, 15, 28, 0.88);
+}
+
+/* Reset-ish */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { overflow-x: hidden; }
+
+/* Sticky footer layout */
+body.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--dunkles-navy);
+  color: var(--soft-cyan);
+  font-family: "Inter", "Source Sans Pro", sans-serif;
+  line-height: 1.65;
+}
+
+main { flex: 1; }
+
+/* ----------------------------
+   Navbar
+----------------------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(10, 15, 28, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--soft-cyan);
+  z-index: 2000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav-logo {
+  font-family: "Orbitron", "Audiowide", sans-serif;
+  color: var(--neon-lila);
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  font-family: "Rajdhani", "Titillium Web", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--soft-cyan);
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--neon-magenta);
+  text-shadow: 0 0 10px rgba(255, 0, 200, 0.35);
+}
+
+.nav-links a.active {
+  color: var(--neon-magenta);
+}
+
+/* Burger Button */
+.burger {
+  display: none;
+  border: 1px solid rgba(102, 252, 241, 0.6);
+  background: rgba(0, 229, 255, 0.08);
+  border-radius: 10px;
+  padding: 0.55rem 0.6rem;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: var(--soft-cyan);
+  margin: 5px 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Burger -> X */
+.burger.toggle span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+.burger.toggle span:nth-child(2) { opacity: 0; }
+.burger.toggle span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+/* Mobile nav behavior */
+@media (max-width: 900px) {
+  .burger { display: inline-block; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0.9rem;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 1rem;
+    width: min(320px, calc(100vw - 2rem));
+    padding: 1rem;
+    background: var(--glass-strong);
+    border: 1px solid var(--soft-cyan);
+    border-radius: 14px;
+    box-shadow: 0 0 22px rgba(0, 229, 255, 0.18);
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+  }
+}
+
+/* ----------------------------
+   Content
+----------------------------- */
+.ueber-mich-main {
+  padding: 1rem 1.25rem 6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.ueber-box {
+  width: 100%;
+  max-width: 1000px;
+  background: var(--glass);
+  border: 3px solid var(--soft-cyan);
+  border-radius: 16px;
+  padding: 2.25rem;
+  box-shadow: 0 0 16px rgba(0, 229, 255, 0.18);
+  backdrop-filter: blur(10px);
+  margin-top: 1.25rem;
+}
+
+/* Header with avatar */
+.ueber-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  margin-bottom: 1.75rem;
+}
+
+.ueber-avatar {
+  width: 170px;
+  height: 170px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid var(--neon-lila);
+  box-shadow: 0 0 18px rgba(179, 136, 255, 0.45);
+  flex: 0 0 auto;
+}
+
+.ueber-title h1 {
+  font-family: "Orbitron", "Audiowide", sans-serif;
+  margin: 0 0 0.4rem 0;
+  color: var(--neon-blau);
+  letter-spacing: 1px;
+  font-size: 2.2rem;
+}
+
+.ueber-subtitle {
+  margin: 0;
+  color: rgba(102, 252, 241, 0.95);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.1rem;
+}
+
+/* Text */
+.ueber-text p { margin: 0 0 1rem 0; }
+
+.highlight {
+  color: var(--neon-magenta);
+  font-weight: 700;
+}
+
+/* Cards / sections */
+.ueber-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+.card {
+  background: rgba(0, 229, 255, 0.06);
+  border: 1px solid rgba(102, 252, 241, 0.65);
+  border-radius: 14px;
+  padding: 1.25rem;
+}
+
+.card h2 {
+  margin: 0 0 0.75rem 0;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.35rem;
+  color: var(--neon-lila);
+}
+
+.muted {
+  margin: 0;
+  color: rgba(102, 252, 241, 0.88);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(102, 252, 241, 0.75);
+  background: rgba(10, 15, 28, 0.5);
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* ----------------------------
+   Footer
+----------------------------- */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: var(--neon-lila);
+  border-top: 1px solid rgba(102, 252, 241, 0.6);
+  background: rgba(10, 15, 28, 0.92);
+}
+
+/* ----------------------------
+   Responsive breakpoints
+----------------------------- */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .ueber-box { padding: 1.75rem; }
+  .ueber-title h1 { font-size: 2rem; }
+  .ueber-avatar { width: 150px; height: 150px; }
+  .ueber-cards { grid-template-columns: 1fr; }
+}
+
+/* Phones */
+@media (max-width: 520px) {
+  .ueber-header {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .ueber-title h1 { font-size: 1.75rem; }
+  .ueber-subtitle { font-size: 1rem; }
+
+  .ueber-box {
+    border-width: 2px;
+    padding: 1.25rem;
+  }
+}
+
+/* Very wide screens (Ultrawide / 4K) */
+@media (min-width: 1600px) {
+  .nav-container { max-width: 1400px; }
+  .ueber-box { max-width: 1150px; }
+  .ueber-title h1 { font-size: 2.5rem; }
+}
