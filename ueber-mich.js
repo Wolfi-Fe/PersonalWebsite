@@ -1,6 +1,4 @@
-// Whitewelpe.de – Über mich
-// Aufgabe: Automatische Altersberechnung
-// Geburtstag: 19.07.2002
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const alterElement = document.getElementById("alter");

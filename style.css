@@ -1,13 +1,4 @@
-/* ======================================================
-   Whitewelpe.de – GLOBAL STYLE.CSS
-   Neon-Cyber meets Runen-Vibes (clean & consistent)
-   Works for: index, ueber-mich, projekt, kontakt, lili,
-              impressum, datenschutz
-   ====================================================== */
 
-/* =========================
-   THEME VARIABLEN
-   ========================= */
 :root {
     --neon-blau: #00E5FF;
     --neon-lila: #B388FF;
@@ -25,9 +16,7 @@
     --radius: 14px;
 }
 
-/* =========================
-   RESET & BASIS
-   ========================= */
+
 * { box-sizing: border-box; }
 
 html, body {
@@ -55,9 +44,7 @@ a { color: inherit; }
 
 p { margin: 0 0 1rem; }
 
-/* =========================
-   HELFER
-   ========================= */
+
 .highlight {
     color: var(--neon-magenta);
     font-weight: 700;
@@ -77,9 +64,7 @@ p { margin: 0 0 1rem; }
 }
 .link:hover { color: var(--neon-magenta); }
 
-/* =========================
-   BUTTONS (GLOBAL)
-   ========================= */
+
 .button {
     display: inline-block;
     padding: .78rem 1.18rem;
@@ -110,9 +95,7 @@ p { margin: 0 0 1rem; }
     color: #fff;
 }
 
-/* =========================
-   NAVBAR (GLOBAL)
-   ========================= */
+
 .navbar {
     position: sticky;
     top: 0;
@@ -123,7 +106,6 @@ p { margin: 0 0 1rem; }
     z-index: 2000;
 }
 
-/* Fix: auf Hero-Seiten soll Navbar identisch wirken wie auf Content-Seiten */
 .has-hero .navbar {
     background: rgba(10, 15, 28, 0.92);
     backdrop-filter: blur(12px);
@@ -147,7 +129,6 @@ p { margin: 0 0 1rem; }
     user-select: none;
 }
 
-/* Links (Desktop) */
 .nav-links {
     list-style: none;
     display: flex;
@@ -173,7 +154,7 @@ p { margin: 0 0 1rem; }
     color: var(--neon-magenta);
 }
 
-/* Burger */
+
 .burger {
     display: none;
     border: 1px solid rgba(102, 252, 241, 0.6);
@@ -192,12 +173,10 @@ p { margin: 0 0 1rem; }
     transition: transform .25s ease, opacity .25s ease;
 }
 
-/* Burger -> X animation (menu.js toggles .toggle) */
 .burger.toggle span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
 .burger.toggle span:nth-child(2) { opacity: 0; }
 .burger.toggle span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
 
-/* Mobile dropdown (menu.js toggles .nav-active on .nav-links) */
 @media (max-width: 900px) {
     .burger { display: inline-block; }
 
@@ -221,9 +200,7 @@ p { margin: 0 0 1rem; }
     }
 }
 
-/* =========================
-   HERO (INDEX)
-   ========================= */
+
 .hero-home {
     position: relative;
     min-height: 75vh;
@@ -232,7 +209,7 @@ p { margin: 0 0 1rem; }
     justify-content: center;
     text-align: center;
 
-    /* Dein Banner */
+
     background: url("/img/banner.png") center / cover no-repeat;
 }
 
@@ -277,7 +254,7 @@ p { margin: 0 0 1rem; }
     flex-wrap: wrap;
 }
 
-/* Fix: Mobile Hero kompakter & balanced */
+
 @media (max-width: 520px) {
     .hero-home { min-height: 60vh; }
     .hero-content { padding: 4.5rem 1.25rem 2rem; }
@@ -287,9 +264,7 @@ p { margin: 0 0 1rem; }
     .hero-buttons { gap: .6rem; }
 }
 
-/* =========================
-   SEITEN-LAYOUT (GLOBAL BOX)
-   ========================= */
+
 .page-wrap {
     padding: 2rem 2rem 5rem;
     display: flex;
@@ -314,9 +289,7 @@ p { margin: 0 0 1rem; }
     text-align: center;
 }
 
-/* =========================
-   HEADLINE OVERFLOW FIX
-   ========================= */
+
 
 h1, h2 {
     max-width: 100%;
@@ -326,7 +299,7 @@ h1, h2 {
 }
 
 
-/* Kompatibilität zu deinen bisherigen Klassen */
+
 .home-main,
 .ueber-mich-main,
 .kontakt-main,
@@ -360,9 +333,7 @@ h1, h2 {
     text-align: center;
 }
 
-/* =========================
-   KONTAKT (Buttons/Links)
-   ========================= */
+
 .kontakt-links {
     list-style: none;
     padding: 0;
@@ -395,9 +366,6 @@ h1, h2 {
     border-color: var(--neon-magenta);
 }
 
-/* =========================
-   KONTAKT – ZENTRIERT
-   ========================= */
 
 .kontakt-center {
     flex: 1;
@@ -407,9 +375,6 @@ h1, h2 {
     padding: 2rem 2rem 5rem;
 }
 
-/* =========================
-   LILI – Andenken Seite
-   ========================= */
 
 .lili-box h2{
     font-family: "Orbitron", sans-serif;
@@ -453,14 +418,14 @@ h1, h2 {
     margin-top: 1.25rem;
 }
 
-/* Mobile Feinschliff */
+
 @media (max-width: 520px){
     .lili-poem{ padding: 1rem; }
     .lili-image{ max-width: 100%; }
 }
 
 
-/* Mobile Feinschliff */
+
 @media (max-width: 520px) {
     .kontakt-center {
         padding: 2rem 1.25rem 4rem;
@@ -471,14 +436,12 @@ h1, h2 {
     }
 }
 
-/* Mobile: volle Breite */
+
 @media (max-width: 520px) {
     .kontakt-links a { width: 100%; }
 }
 
-/* =========================
-   PROJEKTE – GRID/KACHELN
-   ========================= */
+
 .projekt-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -511,14 +474,12 @@ h1, h2 {
     margin: 0 0 .9rem;
 }
 
-/* Tablet/Mobile: 1 Spalte */
+
 @media (max-width: 900px) {
     .projekt-grid { grid-template-columns: 1fr; }
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+
 .site-footer,
 footer {
     text-align: center;
@@ -528,11 +489,7 @@ footer {
     background: rgba(10, 15, 28, 0.92);
 }
 
-/* =========================
-   RESPONSIVE BREAKPOINTS
-   (wie Über-mich-Style)
-   ========================= */
-/* Tablet */
+
 @media (max-width: 900px) {
     .home-main,
     .ueber-mich-main,
@@ -551,7 +508,7 @@ footer {
     }
 }
 
-/* Mobile */
+
 @media (max-width: 520px) {
     .home-main,
     .ueber-mich-main,
@@ -571,7 +528,7 @@ footer {
     }
 }
 
-/* Ultrawide / 4K */
+
 @media (min-width: 1600px) {
     .nav-container { max-width: 1400px; }
     .hero-content { max-width: 1100px; }

@@ -1,9 +1,3 @@
-/* ----------------------------
-   Whitewelpe.de – Über mich
-   Voll responsiv: Mobile -> 4K
------------------------------ */
-
-/* Styleguide Colors */
 :root {
   --neon-blau: #00E5FF;
   --neon-lila: #B388FF;
@@ -15,12 +9,12 @@
   --glass-strong: rgba(10, 15, 28, 0.88);
 }
 
-/* Reset-ish */
+
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 body { overflow-x: hidden; }
 
-/* Sticky footer layout */
+
 body.page {
   min-height: 100vh;
   display: flex;
@@ -33,9 +27,7 @@ body.page {
 
 main { flex: 1; }
 
-/* ----------------------------
-   Navbar
------------------------------ */
+
 .navbar {
   position: sticky;
   top: 0;
@@ -89,7 +81,7 @@ main { flex: 1; }
   color: var(--neon-magenta);
 }
 
-/* Burger Button */
+
 .burger {
   display: none;
   border: 1px solid rgba(102, 252, 241, 0.6);
@@ -108,12 +100,12 @@ main { flex: 1; }
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-/* Burger -> X */
+
 .burger.toggle span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
 .burger.toggle span:nth-child(2) { opacity: 0; }
 .burger.toggle span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
 
-/* Mobile nav behavior */
+
 @media (max-width: 900px) {
   .burger { display: inline-block; }
 
@@ -137,9 +129,7 @@ main { flex: 1; }
   }
 }
 
-/* ----------------------------
-   Content
------------------------------ */
+
 .ueber-mich-main {
   padding: 1rem 1.25rem 6rem;
   display: flex;
@@ -158,7 +148,7 @@ main { flex: 1; }
   margin-top: 1.25rem;
 }
 
-/* Header with avatar */
+
 .ueber-header {
   display: flex;
   align-items: center;
@@ -192,7 +182,7 @@ main { flex: 1; }
   font-size: 1.1rem;
 }
 
-/* Text */
+
 .ueber-text p { margin: 0 0 1rem 0; }
 
 .highlight {
@@ -200,7 +190,6 @@ main { flex: 1; }
   font-weight: 700;
 }
 
-/* Cards / sections */
 .ueber-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -244,9 +233,7 @@ main { flex: 1; }
   font-size: 0.95rem;
 }
 
-/* ----------------------------
-   Footer
------------------------------ */
+
 .site-footer {
   text-align: center;
   padding: 1.5rem 1rem;
@@ -255,11 +242,7 @@ main { flex: 1; }
   background: rgba(10, 15, 28, 0.92);
 }
 
-/* ----------------------------
-   Responsive breakpoints
------------------------------ */
 
-/* Tablets */
 @media (max-width: 900px) {
   .ueber-box { padding: 1.75rem; }
   .ueber-title h1 { font-size: 2rem; }
@@ -267,7 +250,7 @@ main { flex: 1; }
   .ueber-cards { grid-template-columns: 1fr; }
 }
 
-/* Phones */
+
 @media (max-width: 520px) {
   .ueber-header {
     flex-direction: column;
@@ -284,7 +267,6 @@ main { flex: 1; }
   }
 }
 
-/* Very wide screens (Ultrawide / 4K) */
 @media (min-width: 1600px) {
   .nav-container { max-width: 1400px; }
   .ueber-box { max-width: 1150px; }
