@@ -1,69 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JARVIS Controller – modulares Steuerungsinterface für VRChat, Sprache, OSC und Netzwerkgeräte.">
+  <meta name="theme-color" content="#050914">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="JARVIS Controller – Whitewelpe.de">
+  <meta property="og:description" content="Sprache, OSC, Geräte und VRChat-Interaktionen in einem modularen System.">
+  <meta property="og:image" content="https://whitewelpe.de/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://whitewelpe.de/og.png">
   <title>JARVIS Controller – Whitewelpe.de</title>
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@600&family=Rajdhani:wght@400;600&family=Titillium+Web:wght@400;600&family=Inter:wght@400;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"/>
-  <script src="menu.js"></script>
+  <link rel="canonical" href="https://whitewelpe.de/jarvis.html">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#inhalt">Direkt zum Inhalt</a>
 
-<nav class="navbar">
-  <div class="nav-container">
-    <div class="nav-logo">ᚹᚯ̈ᛚᚠᛁ</div>
-
-    <div class="burger">
-      <div></div>
-      <div></div>
-      <div></div>
+  <header class="navbar">
+    <div class="nav-container">
+      <a class="brand" href="index.html" aria-label="Whitewelpe Startseite">
+        <img class="brand-mark" src="img/brand-mark.webp" alt="" width="42" height="42">
+        <span class="brand-copy"><span class="brand-name">Whitewelpe</span><span class="brand-runes" aria-hidden="true">ᚹᚯ̈ᛚᚠᛁ</span></span>
+      </a>
+      <button class="burger" type="button" aria-label="Navigation öffnen" aria-controls="hauptnavigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links" id="hauptnavigation">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="ueber-mich.html">Über mich</a></li>
+          <li><a class="active" href="projekt.html">Projekte</a></li>
+          <li><a href="lili.html">Lili</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <ul class="nav-links">
-      <li><a href="index.html">Start</a></li>
-      <li><a href="ueber-mich.html">Über mich</a></li>
-      <li><a href="projekt.html">Projekte</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-      <li><a href="lili.html">Lili</a></li>
-      <li><a href="impressum.html">Impressum</a></li>
-      <li><a href="datenschutz.html">Datenschutz</a></li>
-    </ul>
-  </div>
-</nav>
+  <main id="inhalt" class="jarvis-layout">
+    <article class="jarvis-card">
+      <p class="eyebrow">Projekt 03 · Automation & VR</p>
+      <h1>JARVIS Controller</h1>
+      <p class="jarvis-intro">
+        Ein modulares Steuerungsinterface, das VRChat-Avatare, Geräte und Interaktionen
+        über Sprache, OSC und Netzwerkprotokolle intelligent miteinander verbindet.
+      </p>
 
+      <h2>Technische Bausteine</h2>
+      <ul class="feature-list">
+        <li><strong>OSC / UDP</strong><br>Senden und Empfangen von Parametern direkt an VRChat-Avatare.</li>
+        <li><strong>Spracherkennung</strong><br>Lokale Integration von <code>Vosk</code> und <code>Whisper</code>.</li>
+        <li><strong>WebSocket-Geräte</strong><br>Anbindung kompatibler Haptik- und Netzwerkgeräte.</li>
+        <li><strong>Python GUI</strong><br>Bedienoberfläche mit <code>PyQt</code> oder <code>Tkinter</code>.</li>
+        <li><strong>Command-Parser</strong><br>Erweiterbare Befehle in klar getrennten Modulen.</li>
+        <li><strong>ZeroTier</strong><br>Direkte Peer-to-Peer-Kommunikation ohne klassische Portfreigabe.</li>
+      </ul>
 
-<main class="jarvis-main hero">
-  <section class="jarvis-box jarvis-card">
-    <h1>🧠 JARVIS Controller</h1>
-    <p>Ein modulares Steuerungsinterface, das VRChat-Avatare, Geräte und Interaktionen über Sprache, OSC und Netzwerkprotokolle intelligent verbindet.</p>
+      <h2>Warum das Projekt?</h2>
+      <p>
+        JARVIS verbindet mehrere meiner Interessen: Automatisierung, Sprache, Netzwerke,
+        Benutzeroberflächen und VR. Das Ziel ist kein einzelner großer Monolith, sondern
+        ein System aus austauschbaren Modulen, das mit neuen Ideen wachsen kann.
+      </p>
 
-    <h2>🔧 Technische Highlights</h2>
-    <ul>
-      <li><strong>OSC / UDP Kommunikation</strong> – Senden & Empfangen von Parametern direkt an VRChat-Avatare</li>
-      <li><strong>Voice Recognition</strong> – Integration von <code>Vosk</code> und <code>Whisper</code> für Sprachsteuerung</li>
-      <li><strong>Intiface WebSocket</strong> – Steuerung von Haptik-Devices wie Lovense & Co.</li>
-      <li><strong>Python GUI</strong> – Benutzeroberfläche mit <code>PyQt</code> oder <code>Tkinter</code></li>
-      <li><strong>Modularer Command-Parser</strong> – flexible Erweiterung per Module</li>
-      <li><strong>ZeroTier Integration</strong> – Peer-to-Peer Kommunikation ohne Portfreigabe</li>
-    </ul>
+      <h2>Nächste Schritte</h2>
+      <ul>
+        <li>Avatar-Scan und visuelles Statusfeedback</li>
+        <li>Optionale Sprach-KI-Integration</li>
+        <li>Konfigurationsoberfläche ohne Coding-Hürde</li>
+        <li>Installer und sichere automatische Updates</li>
+      </ul>
 
+      <div class="button-row">
+        <a class="button" href="projekt.html">Zurück zu den Projekten</a>
+        <a class="button button-secondary" href="kontakt.html">Frage zum Projekt</a>
+      </div>
+    </article>
+  </main>
 
-    <h2>🚀 Zukunftspläne</h2>
-    <ul>
-      <li>👁️‍🗨️ Avatar-Scan & visuelles Feedback</li>
-      <li>🤖 GPT-basierte Sprach-KI-Integration</li>
-      <li>🎛️ Konfig-Tool für Nutzer ohne Coding-Erfahrung</li>
-      <li>📦 Installer & automatische Updates</li>
-    </ul>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><span class="footer-brand">Whitewelpe.de</span> · © <span data-current-year>2026</span></div>
+      <div class="footer-links">
+        <a href="https://github.com/Wolfi-Fe" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
 
-    <a href="projekt.html" class="button">Zurück zu den Projekten</a>
-  </section>
-</main>
-
-<footer>
-  © 2025 Whitewelpe.de – 🐺
-</footer>
-
+  <script src="menu.js"></script>
 </body>
 </html>

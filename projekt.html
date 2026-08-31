@@ -1,107 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projekte – Whitewelpe.de</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@600&family=Rajdhani:wght@400;600&family=Titillium+Web:wght@400;600&family=Inter:wght@400;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projekte von Whitewelpe: Software, Automatisierung, NixOS-Infrastruktur, Self-hosting und VR-Tooling.">
+  <meta name="theme-color" content="#050914">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projekte – Whitewelpe.de">
+  <meta property="og:description" content="Software, Systeme und Experimente aus der echten Werkstatt.">
+  <meta property="og:image" content="https://whitewelpe.de/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://whitewelpe.de/og.png">
+  <title>Projekte – Whitewelpe.de</title>
+  <link rel="canonical" href="https://whitewelpe.de/projekt.html">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
+  <a class="skip-link" href="#inhalt">Direkt zum Inhalt</a>
 
-<body class="page">
-
-<nav class="navbar">
+  <header class="navbar">
     <div class="nav-container">
-        <div class="nav-logo">ᚹᚯ̈ᛚᚠᛁ</div>
-
-        <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <ul class="nav-links">
-            <li><a href="index.html">Start</a></li>
-            <li><a href="ueber-mich.html">Über mich</a></li>
-            <li><a class="active" href="projekt.html">Projekte</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-            <li><a href="lili.html">Lili</a></li>
-            <li><a href="impressum.html">Impressum</a></li>
-            <li><a href="datenschutz.html">Datenschutz</a></li>
+      <a class="brand" href="index.html" aria-label="Whitewelpe Startseite">
+        <img class="brand-mark" src="img/brand-mark.webp" alt="" width="42" height="42">
+        <span class="brand-copy"><span class="brand-name">Whitewelpe</span><span class="brand-runes" aria-hidden="true">ᚹᚯ̈ᛚᚠᛁ</span></span>
+      </a>
+      <button class="burger" type="button" aria-label="Navigation öffnen" aria-controls="hauptnavigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links" id="hauptnavigation">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="ueber-mich.html">Über mich</a></li>
+          <li><a class="active" aria-current="page" href="projekt.html">Projekte</a></li>
+          <li><a href="lili.html">Lili</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
+      </nav>
     </div>
-</nav>
+  </header>
 
-<main class="projekt-main">
-    <section class="projekt-box">
-        <h1>Projekte</h1>
-
-        <p class="muted" style="text-align:center;">
-            Eine Auswahl meiner aktuellen Projekte, Systeme und Experimente.
+  <main id="inhalt">
+    <section class="page-hero">
+      <div class="container page-heading">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Gebaut, getestet, <span class="gradient-text">weitergedacht.</span></h1>
+        <p class="kicker">
+          Eine Auswahl aus Softwareentwicklung, Infrastruktur und Automatisierung.
+          Einige Projekte sind produktiv, andere wachsen noch – ehrlicher wird ein Portfolio nicht.
         </p>
-
-        <div class="projekt-grid">
-
-            <article class="projekt-card">
-                <h2>Whitewelpe.de</h2>
-                <p>
-                    Meine persönliche Website als Portfolio, Lernplattform und
-                    zentrale Anlaufstelle für meine Projekte.
-                </p>
-            </article>
-
-            <article class="projekt-card">
-                <h2>Eigener Server · NixOS</h2>
-                <p>
-                    Eigene Infrastruktur mit NixOS:
-                    Cloud, Mailserver, Game-Server, Website-Hosting
-                    und vollständige Eigenverwaltung.
-                </p>
-            </article>
-
-            <article class="projekt-card">
-                <h2>VR / Tooling & Automation</h2>
-                <p>
-                    Eigene Tools und Skripte für Automatisierung,
-                    Experimente mit VRChat, OSC, Steuerung und Systemintegration.
-                </p>
-            </article>
-
-            <article class="projekt-card">
-                <h2>Helpers Creation Cave</h2>
-                <p>
-                    Discord-Server mit Fokus auf Wissensaustausch zu
-                    Blender, Unity, Substance Painter,
-                    Avataren und Asset-Erstellung.
-                </p>
-            </article>
-
-            <article class="projekt-card">
-                <h2>Me and The Boys</h2>
-                <p>
-                    Website-Projekt für ein Team-/Community-Umfeld
-                    mit eigenem Design und Struktur.
-                </p>
-            </article>
-
-            <article class="projekt-card">
-                <h2>Weitere Projekte</h2>
-                <p>
-                    Weitere Experimente, Tools und Systeme sind in Planung
-                    und werden hier ergänzt.
-                </p>
-            </article>
-
-        </div>
+      </div>
     </section>
-</main>
 
-<footer class="site-footer">
-    © 2025 Whitewelpe.de – 🐺
-</footer>
+    <section class="section-compact">
+      <div class="container project-grid">
+        <article class="project-card featured">
+          <div class="project-meta">
+            <span class="project-number">01</span>
+            <span class="project-type">Aktiv in Entwicklung</span>
+          </div>
+          <h2>Arbeitsdienst-App</h2>
+          <p>
+            Eine modulare Verwaltungsanwendung für Fischereivereine. Sie bündelt Mitglieder,
+            Arbeitsdienste, Abfischen, Termine, Dokumente, Signaturen und Exporte in einer
+            übersichtlichen Desktop-Oberfläche – ergänzt durch Backend und Update-Service.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span><span class="tag">PySide6</span><span class="tag">FastAPI</span>
+            <span class="tag">Docker</span><span class="tag">Multi-Tenant</span>
+          </div>
+        </article>
 
-<script src="menu.js"></script>
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="project-number">02</span>
+            <span class="project-type">Produktiv</span>
+          </div>
+          <h2>WolfCode Infrastruktur</h2>
+          <p>
+            Eigene NixOS-Infrastruktur mit Cloud, Mail, Websites, Datenbanken, Monitoring
+            und Game-Servern. Deklarativ aufgebaut, selbst gewartet und auf Wiederholbarkeit ausgelegt.
+          </p>
+          <div class="project-tags">
+            <span class="tag">NixOS</span><span class="tag">Docker</span><span class="tag">Btrfs</span><span class="tag">Networking</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="project-number">03</span>
+            <span class="project-type">Automation · VR</span>
+          </div>
+          <h2>JARVIS Controller</h2>
+          <p>
+            Ein modulares Steuerungsinterface, das VRChat-Avatare, Sprache, Geräte und
+            Netzwerkprotokolle miteinander verbindet.
+          </p>
+          <a class="project-link" href="jarvis.html">Details ansehen →</a>
+          <div class="project-tags">
+            <span class="tag">Python</span><span class="tag">OSC</span><span class="tag">Voice</span><span class="tag">WebSocket</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="project-number">04</span>
+            <span class="project-type">Open Source Setup</span>
+          </div>
+          <h2>NixOS Flake</h2>
+          <p>
+            Gemeinsame, deklarative Konfiguration für Desktop, Laptop und Server – mit
+            Home Manager, Secure Boot, Impermanence und reproduzierbaren Systemrollen.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Nix</span><span class="tag">Home Manager</span><span class="tag">Lanzaboote</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="project-number">05</span>
+            <span class="project-type">Web · Branding</span>
+          </div>
+          <h2>Whitewelpe.de</h2>
+          <p>
+            Diese Website ist Portfolio, Spielwiese und Visitenkarte zugleich – bewusst
+            leichtgewichtig, ohne unnötige Framework-Schichten und mit eigener Bildsprache.
+          </p>
+          <div class="project-tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Design</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="project-number">06</span>
+            <span class="project-type">Community</span>
+          </div>
+          <h2>Helpers Creation Cave</h2>
+          <p>
+            Eine Community rund um Blender, Unity, Substance Painter, Avatare und Assets –
+            mit Fokus auf Wissensaustausch und gemeinsames Problemlösen.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Discord</span><span class="tag">3D</span><span class="tag">Unity</span><span class="tag">Community</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cta-panel">
+        <div>
+          <p class="eyebrow">Code ansehen</p>
+          <h2>Ein Teil der Werkstatt steht auf GitHub.</h2>
+          <p>Repositorys, Experimente und die Geschichte hinter den Änderungen – ohne Nebelmaschine.</p>
+        </div>
+        <a class="button" href="https://github.com/Wolfi-Fe" target="_blank" rel="noopener noreferrer">GitHub öffnen <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><span class="footer-brand">Whitewelpe.de</span> · © <span data-current-year>2026</span></div>
+      <div class="footer-links">
+        <a href="https://github.com/Wolfi-Fe" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="menu.js"></script>
 </body>
 </html>

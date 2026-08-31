@@ -1,68 +1,183 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Whitewelpe.de</title>
-
-
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@600&family=Rajdhani:wght@400;600&family=Titillium+Web:wght@400;600&family=Inter:wght@400;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-
-
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Whitewelpe.de – persönliche Projekte rund um Softwareentwicklung, Automatisierung, NixOS und selbst betriebene Infrastruktur.">
+  <meta name="theme-color" content="#050914">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Whitewelpe.de – Code, Systeme & Design">
+  <meta property="og:description" content="Software entwickeln, Systeme verstehen und Ideen zuverlässig zum Laufen bringen.">
+  <meta property="og:image" content="https://whitewelpe.de/og.png">
+  <meta property="og:url" content="https://whitewelpe.de/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Whitewelpe.de – Code, Systeme & Design">
+  <meta name="twitter:description" content="Software entwickeln, Systeme verstehen und Ideen zuverlässig zum Laufen bringen.">
+  <meta name="twitter:image" content="https://whitewelpe.de/og.png">
+  <title>Whitewelpe.de – Code, Systeme & Design</title>
+  <link rel="canonical" href="https://whitewelpe.de/">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
+  <a class="skip-link" href="#inhalt">Direkt zum Inhalt</a>
 
-<body class="page has-hero">
-
-  <nav class="navbar">
+  <header class="navbar">
     <div class="nav-container">
-      <div class="nav-logo">ᚹᚯ̈ᛚᚠᛁ</div>
+      <a class="brand" href="index.html" aria-label="Whitewelpe Startseite">
+        <img class="brand-mark" src="img/brand-mark.webp" alt="" width="42" height="42">
+        <span class="brand-copy">
+          <span class="brand-name">Whitewelpe</span>
+          <span class="brand-runes" aria-hidden="true">ᚹᚯ̈ᛚᚠᛁ</span>
+        </span>
+      </a>
 
-      <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="burger" type="button" aria-label="Navigation öffnen" aria-controls="hauptnavigation" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
 
-      <ul class="nav-links">
-        <li><a class="active" href="index.html">Start</a></li>
-        <li><a href="ueber-mich.html">Über mich</a></li>
-        <li><a href="projekt.html">Projekte</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="lili.html">Lili</a></li>
-        <li><a href="impressum.html">Impressum</a></li>
-        <li><a href="datenschutz.html">Datenschutz</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <header class="hero hero-home">
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-      <div class="runen">ᚹᚯ̈ᛚᚠᛁ</div>
-      <h1>Whitewelpe.de</h1>
-      <p>Software Development, Coding und Design</p>
-
-      <div class="hero-buttons">
-        <a href="projekt.html" class="button">Zu den Projekten</a>
-        <a href="kontakt.html" class="button button-ghost">Kontakt</a>
-      </div>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links" id="hauptnavigation">
+          <li><a class="active" aria-current="page" href="index.html">Start</a></li>
+          <li><a href="ueber-mich.html">Über mich</a></li>
+          <li><a href="projekt.html">Projekte</a></li>
+          <li><a href="lili.html">Lili</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <main class="home-main">
-    <section class="home-box">
-      <h2>Willkommen</h2>
-      <p>
-        Willkommen auf Whitewelpe.de – meiner persönlichen Website für Projekte,
-        Tools und Experimente rund um Software, Server und kreative Technik.
-      </p>
+  <main id="inhalt">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Code · Systeme · Design</p>
+        <h1 id="hero-title">Technik mit <span class="gradient-text">Biss.</span></h1>
+        <p class="hero-lead">
+          Ich entwickle Software, automatisiere Abläufe und betreibe eigene Infrastruktur.
+          Nicht als Hochglanz-Theorie, sondern als Systeme, die im Alltag wirklich laufen.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button" href="projekt.html">Projekte ansehen <span aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="ueber-mich.html">Wer dahintersteckt</a>
+        </div>
+
+        <div class="hero-stats" aria-label="Schwerpunkte">
+          <div class="hero-stat"><strong>Python</strong><span>Software & Tools</span></div>
+          <div class="hero-stat"><strong>NixOS</strong><span>Server & Betrieb</span></div>
+          <div class="hero-stat"><strong>Self-hosted</strong><span>Volle Kontrolle</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img src="img/hero-wolf.webp" alt="Stilisierter weißer Cyber-Wolf vor einem blauen Schaltkreis-Hintergrund" width="1440" height="960" fetchpriority="high">
+        <div class="status-card">
+          <span class="status-label"><span class="status-dot" aria-hidden="true"></span> Lernend, bauend, verbessernd</span>
+          <strong>System online</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container intro-grid">
+        <div class="intro-copy">
+          <p class="eyebrow">Mein Ansatz</p>
+          <h2>Verstehen statt nur zusammenklicken.</h2>
+          <p>
+            Vom ersten Skript bis zum eigenen Server: Mich reizt nicht nur das Ergebnis,
+            sondern der Weg dorthin. Gute Technik darf komplex sein – aber sie sollte am
+            Ende klar, wartbar und verlässlich bleiben.
+          </p>
+        </div>
+
+        <div class="principle-list">
+          <article class="principle">
+            <span class="principle-index">01</span>
+            <div><h3>Sauber entwickeln</h3><p>Klare Strukturen, nachvollziehbare Entscheidungen und Lösungen, die sich weiterbauen lassen.</p></div>
+          </article>
+          <article class="principle">
+            <span class="principle-index">02</span>
+            <div><h3>Selbst betreiben</h3><p>Cloud, Mail, Gameserver und Websites auf einer Infrastruktur, die ich selbst kontrolliere.</p></div>
+          </article>
+          <article class="principle">
+            <span class="principle-index">03</span>
+            <div><h3>Konsequent lernen</h3><p>Probleme zerlegen, Lösungen testen und Wissen nicht nur sammeln, sondern anwenden.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Ausgewählte Arbeiten</p>
+            <h2>Projekte aus der echten Werkstatt.</h2>
+          </div>
+          <p>Software, Infrastruktur und Experimente – gewachsen aus echten Anforderungen und jeder Menge Neugier.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card featured">
+            <div class="project-meta">
+              <span class="project-number">01</span>
+              <span class="project-type">Desktop · Backend · Verwaltung</span>
+            </div>
+            <h3>Arbeitsdienst-App</h3>
+            <p>
+              Eine modulare Verwaltungsanwendung für Fischereivereine – mit Mitgliederverwaltung,
+              Arbeitsdiensten, Signaturen, Exporten und einer eigenen Update-Infrastruktur.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span><span class="tag">PySide6</span><span class="tag">FastAPI</span><span class="tag">Docker</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span class="project-number">02</span>
+              <span class="project-type">Infrastructure</span>
+            </div>
+            <h3>WolfCode Server</h3>
+            <p>NixOS-basierte Infrastruktur mit Hosting, Cloud, Mail, Monitoring und Game-Servern.</p>
+            <div class="project-tags"><span class="tag">NixOS</span><span class="tag">Docker</span><span class="tag">Btrfs</span></div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span class="project-number">03</span>
+              <span class="project-type">Automation · VR</span>
+            </div>
+            <h3>JARVIS Controller</h3>
+            <p>Ein modulares Steuerungsinterface für Sprache, OSC, Geräte und VRChat-Interaktionen.</p>
+            <a class="project-link" href="jarvis.html">Projekt öffnen →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-compact">
+      <div class="container cta-panel">
+        <div>
+          <p class="eyebrow">Kontakt</p>
+          <h2>Eine Idee, ein Problem oder einfach Technik-Talk?</h2>
+          <p>Schreib mir direkt. Gute Projekte beginnen erstaunlich oft mit einer simplen Nachricht.</p>
+        </div>
+        <a class="button" href="kontakt.html">Kontakt aufnehmen <span aria-hidden="true">→</span></a>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    © 2025 Whitewelpe.de – 🐺
+    <div class="footer-inner">
+      <div><span class="footer-brand">Whitewelpe.de</span> · © <span data-current-year>2026</span></div>
+      <div class="footer-links">
+        <a href="https://github.com/Wolfi-Fe" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
   </footer>
 
   <script src="menu.js"></script>
