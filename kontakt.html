@@ -1,56 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kontakt – Whitewelpe.de</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@600&family=Rajdhani:wght@400;600&family=Titillium+Web:wght@400;600&family=Inter:wght@400;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kontakt zu Whitewelpe – per E-Mail oder GitHub.">
+  <meta name="theme-color" content="#050914">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kontakt – Whitewelpe.de">
+  <meta property="og:description" content="Direkte Wege zu Pascal Gröger und Whitewelpe.">
+  <meta property="og:image" content="https://whitewelpe.de/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://whitewelpe.de/og.png">
+  <title>Kontakt – Whitewelpe.de</title>
+  <link rel="canonical" href="https://whitewelpe.de/kontakt.html">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
+  <a class="skip-link" href="#inhalt">Direkt zum Inhalt</a>
 
-<body class="page">
-
-<nav class="navbar">
+  <header class="navbar">
     <div class="nav-container">
-        <div class="nav-logo">ᚹᚯ̈ᛚᚠᛁ</div>
-
-        <button class="burger" type="button" aria-label="Menü öffnen">
-            <span></span><span></span><span></span>
-        </button>
-
-        <ul class="nav-links">
-            <li><a href="index.html">Start</a></li>
-            <li><a href="ueber-mich.html">Über mich</a></li>
-            <li><a href="projekt.html">Projekte</a></li>
-            <li><a class="active" href="kontakt.html">Kontakt</a></li>
-            <li><a href="lili.html">Lili</a></li>
-            <li><a href="impressum.html">Impressum</a></li>
-            <li><a href="datenschutz.html">Datenschutz</a></li>
+      <a class="brand" href="index.html" aria-label="Whitewelpe Startseite">
+        <img class="brand-mark" src="img/brand-mark.webp" alt="" width="42" height="42">
+        <span class="brand-copy"><span class="brand-name">Whitewelpe</span><span class="brand-runes" aria-hidden="true">ᚹᚯ̈ᛚᚠᛁ</span></span>
+      </a>
+      <button class="burger" type="button" aria-label="Navigation öffnen" aria-controls="hauptnavigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links" id="hauptnavigation">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="ueber-mich.html">Über mich</a></li>
+          <li><a href="projekt.html">Projekte</a></li>
+          <li><a href="lili.html">Lili</a></li>
+          <li><a class="active" aria-current="page" href="kontakt.html">Kontakt</a></li>
         </ul>
+      </nav>
     </div>
-</nav>
+  </header>
 
-<main class="kontakt-center">
-    <section class="kontakt-box">
-        <h1>Kontakt</h1>
-
-        <p class="muted" style="text-align:center;">
-            Kein Formular – direkte Wege zu mir:
+  <main id="inhalt">
+    <section class="page-hero">
+      <div class="container page-heading">
+        <p class="eyebrow">Kontakt</p>
+        <h1>Lass uns <span class="gradient-text">reden.</span></h1>
+        <p class="kicker">
+          Kein Formular, kein Ticket-Labyrinth. Schreib mir direkt – zu Projekten,
+          Technik, Zusammenarbeit oder einer Idee, die noch ein bisschen wild klingt.
         </p>
-
-        <ul class="kontakt-links">
-            <li><a href="mailto:kontakt@whitewelpe.de">📧 E-Mail</a></li>
-            <li><a href="https://github.com/AssiWelpe" target="_blank" rel="noopener">🐙 GitHub</a></li>
-            <li><a href="#" title="Discord folgt">💬 Discord</a></li>
-        </ul>
+      </div>
     </section>
-</main>
 
-<footer class="site-footer">
-    © 2025 Whitewelpe.de – 🐺
-</footer>
+    <section class="section-compact">
+      <div class="container contact-grid">
+        <div class="contact-intro">
+          <h2>Der kurze Weg ist meistens der beste.</h2>
+          <p>
+            Für eine erste Nachricht reichen Thema und ein paar klare Sätze völlig aus.
+            Ich antworte, sobald es der Alltag zulässt – ehrlich und ohne Marketing-Roboter.
+          </p>
+          <p class="muted">Bevorzugter Kontakt: E-Mail</p>
+        </div>
 
-<script src="menu.js"></script>
+        <div class="contact-list">
+          <a class="contact-card" href="mailto:kontakt@whitewelpe.de">
+            <span class="contact-icon" aria-hidden="true">@</span>
+            <span><strong>E-Mail</strong><span>kontakt@whitewelpe.de</span></span>
+            <span class="contact-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="contact-card" href="https://github.com/Wolfi-Fe" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon" aria-hidden="true">GH</span>
+            <span><strong>GitHub</strong><span>Wolfi-Fe · Repositorys und Code</span></span>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="contact-card" href="mailto:kontakt@whitewelpe.de?subject=Discord-Kontakt">
+            <span class="contact-icon" aria-hidden="true">DC</span>
+            <span><strong>Discord</strong><span>Kontakt auf Anfrage per E-Mail</span></span>
+            <span class="contact-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><span class="footer-brand">Whitewelpe.de</span> · © <span data-current-year>2026</span></div>
+      <div class="footer-links">
+        <a href="https://github.com/Wolfi-Fe" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="menu.js"></script>
 </body>
 </html>

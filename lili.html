@@ -1,71 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Für Lili – Whitewelpe.de</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rajdhani:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Eine liebevolle Erinnerung an Lili – mein Herz auf vier Pfoten.">
+  <meta name="theme-color" content="#050914">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Für Lili – Whitewelpe.de">
+  <meta property="og:description" content="Wenn Pfoten Spuren im Herzen hinterlassen.">
+  <meta property="og:image" content="https://whitewelpe.de/img/lili-cloud.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://whitewelpe.de/img/lili-cloud.webp">
+  <title>Für Lili – Whitewelpe.de</title>
+  <link rel="canonical" href="https://whitewelpe.de/lili.html">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body class="memorial-page">
+  <a class="skip-link" href="#inhalt">Direkt zum Inhalt</a>
 
-<body class="page">
-
-<nav class="navbar">
+  <header class="navbar">
     <div class="nav-container">
-        <div class="nav-logo">ᚹᚯ̈ᛚᚠᛁ</div>
-
-        <button class="burger" type="button" aria-label="Menü öffnen">
-            <span></span><span></span><span></span>
-        </button>
-
-        <ul class="nav-links">
-            <li><a href="index.html">Start</a></li>
-            <li><a href="ueber-mich.html">Über mich</a></li>
-            <li><a href="projekt.html">Projekte</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-            <li><a class="active" href="lili.html">Lili</a></li>
-            <li><a href="impressum.html">Impressum</a></li>
-            <li><a href="datenschutz.html">Datenschutz</a></li>
+      <a class="brand" href="index.html" aria-label="Whitewelpe Startseite">
+        <img class="brand-mark" src="img/brand-mark.webp" alt="" width="42" height="42">
+        <span class="brand-copy"><span class="brand-name">Whitewelpe</span><span class="brand-runes" aria-hidden="true">ᚹᚯ̈ᛚᚠᛁ</span></span>
+      </a>
+      <button class="burger" type="button" aria-label="Navigation öffnen" aria-controls="hauptnavigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links" id="hauptnavigation">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="ueber-mich.html">Über mich</a></li>
+          <li><a href="projekt.html">Projekte</a></li>
+          <li><a class="active" aria-current="page" href="lili.html">Lili</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
+      </nav>
     </div>
-</nav>
+  </header>
 
-<main class="page-wrap">
-    <section class="box lili-box">
-        <h1>Für Lili – Mein Herz auf vier Pfoten</h1>
-
-        <img
-                class="lili-image"
-                src="img/Lili%20auf%20der%20Wolke.png"
-                alt="Lili auf ihrer Wolke"
-                loading="lazy"
-        />
-
-        <h2>Wenn Pfoten Spuren im Herzen hinterlassen</h2>
-
-        <div class="lili-poem">
-            <p>
-                Du kamst auf leisen Sohlen, ein Wirbel aus Licht und Fell, und wo ich stürzte,
-                hast du gewartet – treu, geduldig, hell.
-            </p>
-            <p>
-                In dunklen Tagen warst du Sonne, ein Blick – und alles stand still.
-                Jetzt wachst du aus den Wolken, und mein Herz ruft einfach: <strong>Lili</strong>.
-            </p>
-        </div>
-
-        <div class="lili-links">
-            <!--   <a class="link" href="impressum.html">Impressum →</a>
-               <a class="link" href="datenschutz.html">Datenschutz →</a>-->
-        </div>
+  <main id="inhalt">
+    <section class="page-hero">
+      <div class="container page-heading">
+        <p class="eyebrow">In Erinnerung</p>
+        <h1>Für <span class="gradient-text">Lili.</span></h1>
+        <p class="kicker">Mein Herz auf vier Pfoten – und ein Platz, der für immer ihrer bleibt.</p>
+      </div>
     </section>
-</main>
 
-<footer class="site-footer">
-    © 2025 Whitewelpe.de
-</footer>
+    <section class="section-compact">
+      <div class="container memorial-grid">
+        <img class="memorial-image" src="img/lili-cloud.webp" alt="Lili auf einer warm beleuchteten Wolke" width="1280" height="853">
 
-<script src="menu.js"></script>
+        <div class="memorial-copy">
+          <p class="eyebrow">Wenn Pfoten Spuren hinterlassen</p>
+          <h2>Manche Begleiter gehen. Ihre Nähe bleibt.</h2>
+          <p>
+            Diese Seite ist kein Projekt und keine technische Spielerei. Sie ist ein stiller
+            Ort für einen kleinen Hund, der einen riesigen Platz im Leben hatte.
+          </p>
+
+          <div class="poem">
+            <p>
+              Du kamst auf leisen Sohlen, ein Wirbel aus Licht und Fell,<br>
+              und wo ich stürzte, hast du gewartet – treu, geduldig, hell.
+            </p>
+            <p>
+              In dunklen Tagen warst du Sonne, ein Blick – und alles stand still.<br>
+              Jetzt wachst du aus den Wolken, und mein Herz ruft einfach: <strong>Lili</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><span class="footer-brand">Whitewelpe.de</span> · © <span data-current-year>2026</span></div>
+      <div class="footer-links">
+        <a href="index.html">Zur Startseite</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="menu.js"></script>
 </body>
 </html>

@@ -1,146 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Über Pascal Gröger: Kfz-Mechatroniker, Technik-Enthusiast und angehender Softwareentwickler hinter Whitewelpe.de.">
+  <meta name="theme-color" content="#050914">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Über mich – Whitewelpe.de">
+  <meta property="og:description" content="Von der Werkstatt zur Softwareentwicklung – mit Praxis, Ausdauer und eigener Infrastruktur.">
+  <meta property="og:image" content="https://whitewelpe.de/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://whitewelpe.de/og.png">
   <title>Über mich – Whitewelpe.de</title>
-
-
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@600&family=Rajdhani:wght@400;600&family=Titillium+Web:wght@400;600&family=Inter:wght@400;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-
-
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="ueber-mich.css" />
+  <link rel="canonical" href="https://whitewelpe.de/ueber-mich.html">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
+  <a class="skip-link" href="#inhalt">Direkt zum Inhalt</a>
 
-<body class="page">
-
-  <nav class="navbar">
+  <header class="navbar">
     <div class="nav-container">
-      <div class="nav-logo">ᚹᚯ̈ᛚᚠᛁ</div>
-
-      <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+      <a class="brand" href="index.html" aria-label="Whitewelpe Startseite">
+        <img class="brand-mark" src="img/brand-mark.webp" alt="" width="42" height="42">
+        <span class="brand-copy"><span class="brand-name">Whitewelpe</span><span class="brand-runes" aria-hidden="true">ᚹᚯ̈ᛚᚠᛁ</span></span>
+      </a>
+      <button class="burger" type="button" aria-label="Navigation öffnen" aria-controls="hauptnavigation" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
-
-      <ul class="nav-links">
-        <li><a href="index.html">Start</a></li>
-        <li><a class="active" href="ueber-mich.html">Über mich</a></li>
-        <li><a href="projekt.html">Projekte</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="lili.html">Lili</a></li>
-        <li><a href="impressum.html">Impressum</a></li>
-        <li><a href="datenschutz.html">Datenschutz</a></li>
-      </ul>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links" id="hauptnavigation">
+          <li><a href="index.html">Start</a></li>
+          <li><a class="active" aria-current="page" href="ueber-mich.html">Über mich</a></li>
+          <li><a href="projekt.html">Projekte</a></li>
+          <li><a href="lili.html">Lili</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-
-  <main class="ueber-mich-main">
-    <section class="ueber-box">
-
-
-      <header class="ueber-header">
-        <img
-          src="/img/Avatar-Cut.png"
-          alt="Pascal Gröger"
-          class="ueber-avatar"
-        />
-
-        <div class="ueber-title">
-          <h1>Pascal Gröger</h1>
-          <p class="ueber-subtitle">
-            Kfz-Mechatroniker · auf dem Weg in die Softwareentwicklung
-          </p>
-        </div>
-      </header>
-
-
-      <div class="ueber-text">
-        <p>
-          Ich bin <span id="alter" class="highlight"></span> und aktuell als
-          <span class="highlight">Kfz-Mechatroniker</span> tätig.
-          Parallel dazu arbeite ich konsequent an meinem Wechsel in die
-          <span class="highlight">Softwareentwicklung</span>.
-        </p>
-
-        <p>
-          Mein aktuelles Ziel ist klar:
-          <span class="highlight">lernen, verstehen und mich weiterentwickeln</span>,
-          bis der Schritt in einen finalen Jobwechsel als Entwickler fachlich
-          und persönlich sinnvoll ist.
-        </p>
-
-        <p>
-          Mein derzeitiger Schwerpunkt liegt auf
-          <span class="highlight">Python</span>,
-          ergänzt durch
-          <span class="highlight">HTML</span> und
-          <span class="highlight">JavaScript</span>,
-          insbesondere für Web- und Tool-basierte Projekte.
-        </p>
-
-        <p>
-          Zusätzlich betreibe ich eigene Infrastruktur:
-          einen <span class="highlight">dedizierten Server</span> mit eigener Cloud,
-          eigenem E-Mail-Server, Game-Servern sowie Website-Hosting.
-          Das gesamte System läuft auf einem für mich optimierten
-          <span class="highlight">NixOS-Setup</span>.
-        </p>
-
-        <p>
-          Meine Projekte – darunter diese Website – dienen mir sowohl als
-          Lernplattform als auch als Portfolio.
-          Ich arbeite strukturiert, lösungsorientiert und mit dem Anspruch,
-          Systeme wirklich zu verstehen.
+  <main id="inhalt">
+    <section class="page-hero">
+      <div class="container page-heading">
+        <p class="eyebrow">Über mich</p>
+        <h1>Zwischen <span class="gradient-text">Werkstatt</span> und Code.</h1>
+        <p class="kicker">
+          Ich bin Pascal Gröger – Kfz-Mechatroniker, Tüftler und auf dem konsequenten Weg
+          in die professionelle Softwareentwicklung.
         </p>
       </div>
+    </section>
 
-      <section class="ueber-cards">
-
-        <article class="card">
-          <h2>Skills</h2>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">HTML</span>
-            <span class="tag">JavaScript</span>
+    <section class="section-compact">
+      <div class="container about-grid">
+        <aside class="profile-card">
+          <img class="profile-image" src="img/avatar-portfolio.webp" alt="Neonblaues Whitewelpe-Wolfssymbol mit Runen" width="640" height="640">
+          <div class="profile-note">
+            <strong>Pascal Gröger</strong>
+            <span id="alter">Jahrgang 2002</span>
           </div>
-        </article>
+        </aside>
 
-        <article class="card">
-          <h2>Projekte & Infrastruktur</h2>
-          <div class="tags">
-            <span class="tag">Whitewelpe.de</span>
-            <span class="tag">Eigener Server</span>
-            <span class="tag">Cloud</span>
-            <span class="tag">Mail</span>
-            <span class="tag">Game-Server</span>
-            <span class="tag">Hosting</span>
-            <span class="tag">NixOS</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <h2>Ziel</h2>
-          <p class="muted">
-            Nachhaltiger Kompetenzaufbau und der Wechsel in einen
-            professionellen Job als Softwareentwickler.
+        <div class="about-copy">
+          <p class="lead">
+            Meine Wurzeln liegen im Handwerk. Dort lernt man schnell: Erst verstehen,
+            dann schrauben – und am Ende muss es zuverlässig funktionieren.
           </p>
-        </article>
+          <p>
+            Genau diesen Anspruch nehme ich mit in die Softwareentwicklung. Ich arbeite mich
+            tief in Probleme ein, teste Lösungen in der Praxis und baue Systeme so, dass ich
+            sie später noch nachvollziehen und warten kann.
+          </p>
+          <p>
+            Mein Schwerpunkt liegt auf Python, Webentwicklung und Automatisierung. Dazu kommen
+            C#, C++, Rust und JavaScript als wachsende Lernfelder. Auf meinem eigenen
+            NixOS-Server betreibe ich Cloud, Mail, Websites, Gameserver und Monitoring selbst.
+          </p>
+          <p>
+            Das Ziel ist klar: der nachhaltige Wechsel in einen Remote-Job als
+            Softwareentwickler – nicht über Nacht, sondern mit einem belastbaren Portfolio
+            und Fähigkeiten, die in echten Projekten gewachsen sind.
+          </p>
 
-      </section>
+          <div class="skill-grid">
+            <section class="skill-panel">
+              <h3>Entwicklung</h3>
+              <div class="tag-list">
+                <span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">HTML & CSS</span>
+                <span class="tag">C#</span><span class="tag">C++</span><span class="tag">Rust</span>
+              </div>
+            </section>
+            <section class="skill-panel">
+              <h3>Systeme</h3>
+              <div class="tag-list">
+                <span class="tag">NixOS</span><span class="tag">Linux</span><span class="tag">Docker</span>
+                <span class="tag">Git</span><span class="tag">Self-hosting</span><span class="tag">Netzwerk</span>
+              </div>
+            </section>
+          </div>
 
+          <div class="button-row">
+            <a class="button" href="projekt.html">Meine Projekte <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="kontakt.html">Kontakt</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Der Weg</p>
+            <h2>Schritt für Schritt, aber mit Richtung.</h2>
+          </div>
+          <p>Kein gerader Lebenslauf aus dem Lehrbuch – dafür Praxis, Eigeninitiative und eine ziemlich hohe Fehlertoleranz beim Debuggen.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-label">Handwerk</div>
+            <div class="timeline-content">
+              <h3>Fehler finden, Systeme verstehen</h3>
+              <p>Als Kfz-Mechatroniker habe ich gelernt, strukturiert zu diagnostizieren und Verantwortung für funktionierende Technik zu übernehmen.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-label">Eigenes Lab</div>
+            <div class="timeline-content">
+              <h3>Infrastruktur selbst aufbauen</h3>
+              <p>Vom Linux-Host bis zum Mail- und Gameserver: Die eigene Umgebung ist mein Labor für Betrieb, Sicherheit und Automatisierung.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-label">Heute</div>
+            <div class="timeline-content">
+              <h3>Software mit echtem Nutzen entwickeln</h3>
+              <p>Tools, Verwaltungssoftware und Webprojekte verbinden das Gelernte zu einem Portfolio, das nicht nur hübsch aussieht, sondern arbeitet.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-label">Nächstes Ziel</div>
+            <div class="timeline-content">
+              <h3>Professionell als Entwickler arbeiten</h3>
+              <p>Der Wechsel in eine Remote-Rolle, in der saubere Lösungen, Lernbereitschaft und Praxis zählen.</p>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    © 2025 Whitewelpe.de – 🐺
+    <div class="footer-inner">
+      <div><span class="footer-brand">Whitewelpe.de</span> · © <span data-current-year>2026</span></div>
+      <div class="footer-links">
+        <a href="https://github.com/Wolfi-Fe" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
   </footer>
 
   <script src="menu.js"></script>
   <script src="ueber-mich.js"></script>
-
 </body>
 </html>
