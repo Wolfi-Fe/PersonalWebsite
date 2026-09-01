@@ -896,6 +896,18 @@ code {
 .footer-links a:hover { color: var(--cyan-300); }
 
 @media (max-width: 980px) {
+  body {
+    background: linear-gradient(180deg, var(--navy-900), var(--navy-950));
+  }
+
+  body.memorial-page {
+    background: linear-gradient(180deg, var(--navy-900), var(--navy-950));
+  }
+
+  body::before { display: none; }
+
+  .navbar { position: relative; }
+
   .burger { display: block; }
 
   .nav-links {
@@ -928,6 +940,20 @@ code {
   .profile-card { max-width: 560px; }
   .card-grid, .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .project-card.featured { grid-column: span 2; }
+
+  .hero-visual,
+  .button,
+  .nav-links,
+  .card,
+  .project-card,
+  .contact-card,
+  .legal-card,
+  .jarvis-card,
+  .profile-card,
+  .cta-panel,
+  .memorial-image {
+    box-shadow: none;
+  }
 }
 
 @media (max-width: 680px) {
@@ -978,5 +1004,19 @@ code {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .button,
+  .project-card,
+  .contact-card {
+    transition: none;
+  }
+
+  .button:hover,
+  .project-card:hover,
+  .contact-card:hover {
+    transform: none;
   }
 }
