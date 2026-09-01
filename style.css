@@ -55,7 +55,10 @@ body {
 }
 
 main { flex: 1; }
-img { max-width: 100%; }
+img {
+  max-width: 100%;
+  height: auto;
+}
 a { color: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
@@ -955,9 +958,26 @@ code {
   .nav-links { right: 0; width: 100%; }
   .hero { padding-block: 3.5rem 4.5rem; }
   .hero h1 { font-size: clamp(3.25rem, 18vw, 5rem); }
-  .hero-visual, .hero-visual > img { min-height: 390px; }
-  .hero-visual { border-radius: 22px; }
-  .status-card { align-items: flex-start; flex-direction: column; }
+  .hero-visual {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+    border-radius: 22px;
+  }
+
+  .hero-visual > img {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .status-card {
+    right: 0.75rem;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 0.75rem 0.85rem;
+  }
 
   .section-heading,
   .cta-panel,
