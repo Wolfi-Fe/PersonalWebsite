@@ -948,7 +948,7 @@ code {
   .nav-container,
   .footer-inner,
   .legal-layout,
-  .jarvis-layout { width: min(100% - 1.5rem, var(--container)); }
+  .jarvis-layout { width: min(100% - 2.5rem, var(--container)); }
 
   .nav-container { min-height: 68px; }
   .brand-runes { display: none; }
@@ -980,7 +980,34 @@ code {
   .timeline-item::before { top: 0.55rem; left: 0.25rem; }
   .timeline-content { padding-left: 0; }
   .timeline-content::before { top: -2.15rem; left: -1.53rem; }
-  .footer-links { justify-content: flex-start; }
+
+  .hero-copy,
+  .page-heading,
+  .intro-copy,
+  .contact-intro {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .hero-actions,
+  .button-row,
+  .hero-stats,
+  .footer-links {
+    justify-content: center;
+  }
+
+  .section-heading,
+  .cta-panel,
+  .footer-inner {
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-heading p,
+  .page-heading .kicker,
+  .cta-panel p {
+    margin-inline: auto;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
