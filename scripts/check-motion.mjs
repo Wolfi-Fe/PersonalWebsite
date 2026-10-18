@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { detectHardwareAcceleration, automaticMotionState } from '../motion.js';
+import { detectHardwareAcceleration, automaticMotionState, nextMotionPreference, resolvedMotionState } from '../motion.js';
 
 const results = [];
 function graphicsFixture(renderer, options = {}) {
@@ -54,4 +54,23 @@ for (const [name,values,expected] of [
   assert.equal(automaticMotionState(values),expected,name);
   results.push({name,passed:true});
 }
+for (const [name,values,expected] of [
+  ['Manual on overrides reduced movement', {manualPreference:'on',reducedMotion:true,hardwareAccelerated:false}, 'active'],
+  ['Manual off overrides hardware', {manualPreference:'off',reducedMotion:false,hardwareAccelerated:true}, 'paused'],
+  ['Automatic mode keeps system preference', {manualPreference:'auto',reducedMotion:true,hardwareAccelerated:true}, 'paused'],
+  ['Hidden page always pauses manual motion', {manualPreference:'on',reducedMotion:false,hardwareAccelerated:true,pageVisible:false}, 'paused'],
+]) {
+  assert.equal(resolvedMotionState(values),expected,name);
+  results.push({name,passed:true});
+}
+for (const [name,values,expected] of [
+  ['Paused automatic state switches on', {currentPreference:'auto',currentState:'paused'}, 'on'],
+  ['Active automatic state switches off', {currentPreference:'auto',currentState:'active'}, 'off'],
+  ['Manual on returns to automatic', {currentPreference:'on',currentState:'active'}, 'auto'],
+  ['Manual off returns to automatic', {currentPreference:'off',currentState:'paused'}, 'auto'],
+]) {
+  assert.equal(nextMotionPreference(values),expected,name);
+  results.push({name,passed:true});
+}
 console.log(`${results.length} motion-policy checks passed.`);
+
