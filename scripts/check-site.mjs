@@ -13,6 +13,13 @@ for(const file of files){
   if(h1s!==1)issues.push(`${file}: expected one H1, found ${h1s}`);
   if(!html.includes('lang="de"'))issues.push(`${file}: missing German language`);
   if(/JARVIS Controller|OSC|Vosk|Whisper|cdn-cgi|cloudflareinsights/.test(html))issues.push(`${file}: stale project copy or injected production script`);
+  const assetVersions = [
+    html.match(/href="style\.css\?v=([^"]+)"/)?.[1],
+    html.match(/href="hud\.css\?v=([^"]+)"/)?.[1],
+    html.match(/src="motion\.js\?v=([^"]+)"/)?.[1],
+  ];
+  if(assetVersions.some(version => !version))issues.push(`${file}: missing cache version for motion assets`);
+  else if(new Set(assetVersions).size !== 1)issues.push(`${file}: motion asset cache versions do not match`);
   for(const match of html.matchAll(/(?:href|src)="([^"]+)"/g)){
     const value=match[1];
     if(/^(https?:|mailto:|tel:|data:)/.test(value))continue;
@@ -39,3 +46,4 @@ for(const match of css.matchAll(/url\(["']?([^\)"']+)/g)){
 const result={checkedAt:new Date().toISOString(),pages,checkedLinks,issues};
 console.log(JSON.stringify(result,null,2));
 if(issues.length)process.exitCode=1;
+

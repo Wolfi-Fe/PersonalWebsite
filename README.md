@@ -26,7 +26,7 @@ Der erste Check benötigt die laufende Vorschau und prüft die acht Seiten sowie
 - `favicon.svg`, `favicon.ico`, PNG-Varianten und `apple-touch-icon.png` verwenden dasselbe Motiv. Versionsparameter in den Seiten vermeiden die Weiterverwendung alter Icons aus dem Browsercache.
 - Der Schnellzugriff bietet direkte Seitenlinks per Klick oder Strg+K, Pfeiltasten, Enter und Escape. Eine Suchfunktion ist nicht enthalten.
 - JARVIS KI wird auf einer kurzen Projektseite mit Entwicklungsstatus vorgestellt.
-- Animationen starten nur bei erkennbarem Hardware-Grafikpfad, ohne reduzierte Bewegung und im sichtbaren Tab. Bei Software-Rendering, fehlenden Grafikdaten oder unklarer Erkennung bleiben sie aus.
+- Animationen starten automatisch nur bei erkennbarem Hardware-Grafikpfad, ohne reduzierte Bewegung und im sichtbaren Tab. Der Status in der Werkzeugleiste ist zusätzlich ein barrierefrei bedienbarer Schalter: Eine bewusste manuelle Auswahl überschreibt die Automatik für diese Website und wird im Browser gespeichert.
 - Die Grafikprüfung speichert und überträgt keine Rendererinformationen; ihr kleiner WebGL-Testkontext wird sofort freigegeben. Die Effekte verwenden CSS-Transformationen und Deckkraft.
 
 ## Betrieb
@@ -34,3 +34,4 @@ Der erste Check benötigt die laufende Vorschau und prüft die acht Seiten sowie
 Die Website-Dateien liegen im Repository-Stamm und können vom Server per `git pull` direkt übernommen werden. Die Browserskripte verwenden die übliche `.js`-Endung; eine zusätzliche MIME-Konfiguration oder ein Build ist nicht erforderlich. Bilder und Schriften benötigen keine externen Dienste. E-Mail und GitHub sind gewöhnliche Links.
 
 Ein Git-Push aktualisiert den Quellstand in diesem Repository. Die Veröffentlichung auf einem Webserver erfolgt über dessen separat eingerichteten Ablauf.
+
